@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../../../components/navigasi/Navbar";
 import CheckID from "../../../components/searchID/CheckID";
+import Footer from "../../../components/navigasi/Footer";
 import PageLocation from "../../../components/navigasi/PageLocation";
 
 interface DetailItemProps {
@@ -38,11 +39,13 @@ const Page: React.FC<DetailItemProps> = ({ params }) => {
 
       <section>
         <div>
-          <PageLocation
-            judul="REVORIONS"
-            place="AUTHENTICITY"
-            classText="text-black"
-          />
+          <Footer bgColor="bg-black" textColor="text-white" />
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <PageLocation place="AUTHENTICITY" classText="text-black" />
         </div>
       </section>
     </main>

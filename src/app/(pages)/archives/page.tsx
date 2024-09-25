@@ -4,6 +4,7 @@ import Navbar from "../../components/navigasi/Navbar";
 import Archives from "../../components/archives/Archives";
 import ArchivesMobile from "../../components/archives/ArchivesMobile";
 import ArchivesMedium from "../../components/archives/ArchivesMedium";
+import Footer from "../../components/navigasi/Footer";
 import PageLocation from "../../components/navigasi/PageLocation";
 
 export const metadata = {
@@ -45,11 +46,13 @@ const page = () => {
 
       <section>
         <div>
-          <PageLocation
-            judul="REVORIONS"
-            place="ARCHIVES"
-            classText="text-white"
-          />
+          <Footer bgColor="bg-black" textColor="text-white" />
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <PageLocation place="ARCHIVES" classText="text-white" />
         </div>
       </section>
     </main>

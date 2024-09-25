@@ -146,7 +146,7 @@ const HomeHero = () => {
 
       <div className="fixed bottom-0 w-full">
         <div>
-          <PageLocation judul="REVORIONS" place="HOME" classText="text-white" />
+          <PageLocation place="HOME" classText="text-white" />
         </div>
       </div>
     </div>

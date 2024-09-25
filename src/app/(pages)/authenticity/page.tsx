@@ -4,6 +4,7 @@ import Navbar from "../../components/navigasi/Navbar";
 import Authenticity from "../../components/authenticity/Authenticity";
 import SearchValidID from "../../components/searchID/SearchValidID";
 import AuthenticityProtection from "../../components/authenticity/AuthenticityProtection";
+import Footer from "../../components/navigasi/Footer";
 import PageLocation from "../../components/navigasi/PageLocation";
 
 export const metadata = {
@@ -64,11 +65,13 @@ const page = () => {
 
       <section>
         <div>
-          <PageLocation
-            judul="REVORIONS"
-            place="AUTHENTICITY"
-            classText="text-black"
-          />
+          <Footer bgColor="bg-black" textColor="text-white" />
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <PageLocation place="AUTHENTICITY" classText="text-black" />
         </div>
       </section>
     </main>

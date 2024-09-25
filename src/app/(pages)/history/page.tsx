@@ -5,6 +5,7 @@ import History from "../../components/history/History";
 import HistoryNote from "../../components/history/HistoryNote";
 import HistoryGallery from "../../components/history/HistoryGallery";
 import HistoryDNA from "../../components/history/HistoryDNA";
+import Footer from "../../components/navigasi/Footer";
 import PageLocation from "../../components/navigasi/PageLocation";
 
 export const metadata = {
@@ -56,13 +57,15 @@ const page = () => {
         </section>
       </section>
 
+      <section>
+        <div>
+          <Footer bgColor="bg-black" textColor="text-white" />
+        </div>
+      </section>
+
       <section className="w-full bg-white">
         <div>
-          <PageLocation
-            judul="RV Evolutions"
-            place="HISTORY"
-            classText="text-black"
-          />
+          <PageLocation place="HISTORY" classText="text-black" />
         </div>
       </section>
     </main>
