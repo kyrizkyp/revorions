@@ -5,7 +5,7 @@ import React from "react";
 const Archives = () => {
   return (
     <div className="w-full px-4">
-      <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center md:justify-between text-white">
+      <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center md:justify-between">
         <Link
           href="/"
           className="flex items-center font-mono font-bold self-start lg:self-auto py-8 lg:py-0"

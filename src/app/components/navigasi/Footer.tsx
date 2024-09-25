@@ -33,7 +33,7 @@ const Footer: React.FC<FooterProps> = ({ bgColor, textColor }) => {
           className="cursor-pointer"
           onClick={() => toggleSection("contact")}
         >
-          <h2 className="font-mono font-bold">CONTACT</h2>
+          <h2 className="font-mono">CONTACT</h2>
         </div>
         <div
           className={`overflow-hidden transition-all duration-500 ease-in-out ${
@@ -59,7 +59,7 @@ const Footer: React.FC<FooterProps> = ({ bgColor, textColor }) => {
           className="cursor-pointer"
           onClick={() => toggleSection("followUs")}
         >
-          <h1 className="font-mono font-bold">FOLLOW US</h1>
+          <h1 className="font-mono">FOLLOW US</h1>
         </div>
         <div
           className={`overflow-hidden transition-all duration-500 ease-in-out ${
@@ -72,7 +72,7 @@ const Footer: React.FC<FooterProps> = ({ bgColor, textColor }) => {
                 <a
                   href={link.url}
                   target="_blank"
-                  className="font-mono text-sm"
+                  className="font-mono text-xs"
                 >
                   {link.name}
                 </a>
@@ -83,7 +83,7 @@ const Footer: React.FC<FooterProps> = ({ bgColor, textColor }) => {
       </div>
 
       <div className={`py-2 ${textColor}`}>
-        <Link href="" className="font-mono font-bold">
+        <Link href="" className="font-mono">
           BRAND ORIGIN
         </Link>
       </div>

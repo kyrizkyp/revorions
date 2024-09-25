@@ -1,11 +1,10 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import PageLocation from "../navigasi/PageLocation";
 
 const konten = [
   {
-    title: "RV EVOLUTIONS",
+    title: "REVOLIONS",
     description:
       "Liven up every moment with a revolutionary fashion twist, a collection of clothing designed to combine an active and dynamic lifestyle, and each design embodies the spirit of modernity and boldness.",
     order: "001",
@@ -86,7 +85,7 @@ const HomeHero = () => {
     <div
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
-      className="fixed flex items-center justify-center w-full h-screen overflow-hidden bg-cover bg-center transition-all duration-1000 ease-in-out"
+      className="flex items-center justify-center w-full h-screen overflow-hidden bg-cover bg-center transition-all duration-1000 ease-in-out"
       style={{
         backgroundImage: `url(${background[currentIndex]})`,
         backgroundSize: "cover",
@@ -141,12 +140,6 @@ const HomeHero = () => {
 
         <div className="text-white absolute -top-4 xl:top-8 left-6 2xl:left-8">
           <p className="font-mono font-bold text-sm">&lsquo;RV24&lsquo;-25</p>
-        </div>
-      </div>
-
-      <div className="fixed bottom-0 w-full">
-        <div>
-          <PageLocation place="HOME" classText="text-white" />
         </div>
       </div>
     </div>

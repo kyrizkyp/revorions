@@ -20,9 +20,12 @@ const page = () => {
         <div className="fixed z-20 w-full">
           <Navbar
             picture="/logo/rvwhite.png"
+            pictureScroll="/logo/rvwhite.png"
             colorsNavbar="bg-black bg-opacity-80"
             colorsText="text-white"
+            colorsTextScroll="text-white"
             colorsIcon="text-white"
+            colorsIconScroll="text-white"
           />
         </div>
       </section>
@@ -65,7 +68,11 @@ const page = () => {
 
       <section className="w-full bg-white">
         <div>
-          <PageLocation place="HISTORY" classText="text-black" />
+          <PageLocation
+            place="HISTORY"
+            classText="text-black"
+            bgColor="bg-white"
+          />
         </div>
       </section>
     </main>

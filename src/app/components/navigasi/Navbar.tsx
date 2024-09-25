@@ -6,16 +6,22 @@ import Notification from "./Notification";
 
 interface NavbarProps {
   picture: string;
+  pictureScroll: string;
   colorsNavbar: string;
   colorsText: string;
+  colorsTextScroll: string;
   colorsIcon: string;
+  colorsIconScroll: string;
 }
 
 const Navbar: React.FC<NavbarProps> = ({
   picture,
+  pictureScroll,
   colorsNavbar,
   colorsText,
+  colorsTextScroll,
   colorsIcon,
+  colorsIconScroll,
 }) => {
   const [openBrand, setBrand] = useState(false);
   const [openItems, setItems] = useState(false);
@@ -203,21 +209,40 @@ const Navbar: React.FC<NavbarProps> = ({
                 openMenu || openBrand || openItems ? "opacity-100" : "opacity-0"
               }`}
             />
-            <img
-              src={picture}
-              alt="Rv"
-              className={`absolute m-[6px] transition-opacity duration-700 transform ${
+
+            <div
+              className={`transition-opacity duration-700 transform ${
                 openMenu || openBrand || openItems ? "opacity-0" : "opacity-100"
               }`}
-            />
+            >
+              <img
+                src={picture}
+                alt="Rv"
+                className={`absolute m-[6px] transition-opacity duration-700 transform ${
+                  isScrolledPast ? "opacity-0" : "opacity-100"
+                }`}
+              />
+
+              <img
+                src={pictureScroll}
+                alt="Rv"
+                className={`absolute m-[6px] transition-opacity duration-700 transform ${
+                  isScrolledPast ? "opacity-100" : "opacity-0"
+                }`}
+              />
+            </div>
           </div>
         </Link>
 
-        <div className="block xl:hidden">
+        <div
+          className={`block xl:hidden ${
+            isScrolledPast ? colorsTextScroll : colorsText
+          }`}
+        >
           <button
             onClick={openMenuClick}
             className={`transform ${
-              animationMenu ? "rotate-180" : colorsText
+              animationMenu ? "rotate-180" : ""
             } transition duration-700`}
           >
             {openMenu ? (
@@ -228,12 +253,16 @@ const Navbar: React.FC<NavbarProps> = ({
           </button>
         </div>
 
-        <div className="hidden xl:block">
+        <div
+          className={`hidden xl:block ${
+            isScrolledPast ? colorsTextScroll : colorsText
+          }`}
+        >
           <div className="flex items-start space-x-32">
             <button
               onClick={openBrandMenu}
               className={`font-mono font-bold transition-all duration-700 transform ${
-                openMenu || openBrand || openItems ? "text-black" : colorsText
+                openMenu || openBrand || openItems ? "text-black" : ""
               }`}
             >
               BRAND
@@ -242,7 +271,7 @@ const Navbar: React.FC<NavbarProps> = ({
             <button
               onClick={openItemsMenu}
               className={`font-mono font-bold transition-all duration-700 transform ${
-                openMenu || openBrand || openItems ? "text-black" : colorsText
+                openMenu || openBrand || openItems ? "text-black" : ""
               }`}
             >
               LIFESTYLE
@@ -250,11 +279,14 @@ const Navbar: React.FC<NavbarProps> = ({
           </div>
         </div>
 
-        <div onClick={openModalNotif}>
+        <div
+          onClick={openModalNotif}
+          className={isScrolledPast ? colorsIconScroll : colorsIcon}
+        >
           {openMenu || openBrand || openItems ? (
             <Notification classModalNotif="text-black" />
           ) : (
-            <Notification classModalNotif={colorsIcon} />
+            <Notification classModalNotif="" />
           )}
         </div>
       </div>

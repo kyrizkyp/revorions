@@ -14,14 +14,17 @@ export const metadata = {
 
 const page = () => {
   return (
-    <main className="min-h-screen flex flex-col bg-black">
+    <main className="min-h-screen flex flex-col">
       <section className="relative">
         <div className="fixed w-full z-20">
           <Navbar
-            picture="/logo/rvwhite.png"
+            picture="/logo/rvblack.png"
+            pictureScroll="/logo/rvwhite.png"
             colorsNavbar="bg-black bg-opacity-80"
-            colorsText="text-white"
-            colorsIcon="text-white"
+            colorsText="text-black"
+            colorsTextScroll="text-white"
+            colorsIcon="text-black"
+            colorsIconScroll="text-white"
           />
         </div>
       </section>
@@ -52,7 +55,11 @@ const page = () => {
 
       <section>
         <div>
-          <PageLocation place="ARCHIVES" classText="text-white" />
+          <PageLocation
+            place="ARCHIVES"
+            classText="text-black"
+            bgColor="bg-white"
+          />
         </div>
       </section>
     </main>

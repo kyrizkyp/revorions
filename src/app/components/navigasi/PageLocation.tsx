@@ -3,12 +3,17 @@ import React from "react";
 interface PageLocationProps {
   place: string;
   classText: string;
+  bgColor: string;
 }
 
-const PageLocation: React.FC<PageLocationProps> = ({ place, classText }) => {
+const PageLocation: React.FC<PageLocationProps> = ({
+  place,
+  classText,
+  bgColor,
+}) => {
   const currentYear = new Date().getFullYear();
   return (
-    <div className="w-full">
+    <div className={`w-full ${bgColor}`}>
       <div className="flex items-start justify-between p-4">
         <div className={classText}>
           <p className="font-mono font-bold">

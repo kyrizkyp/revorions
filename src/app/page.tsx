@@ -1,5 +1,7 @@
 import Navbar from "./components/navigasi/Navbar";
 import HomeHero from "./components/homepage/HomeHero";
+import Footer from "./components/navigasi/Footer";
+import PageLocation from "./components/navigasi/PageLocation";
 
 export const metadata = {
   title: "REVORIONS",
@@ -13,15 +15,28 @@ export default function Home() {
         <div className="fixed w-full z-40">
           <Navbar
             picture="/logo/rvwhite.png"
-            colorsNavbar="bg-black bg-opacity-80"
+            pictureScroll="/logo/rvblack.png"
+            colorsNavbar="bg-white bg-opacity-80"
             colorsText="text-white"
+            colorsTextScroll="text-black"
             colorsIcon="text-white"
+            colorsIconScroll="text-black"
           />
         </div>
 
-        <div className="absolute top-0 left-0 right-0">
+        <div className="top-0 left-0 right-0">
           <HomeHero />
         </div>
+      </section>
+
+      <section>
+        <div>
+          <Footer bgColor="bg-white" textColor="text-black" />
+        </div>
+      </section>
+
+      <section>
+        <PageLocation place="HOME" classText="text-white" bgColor="bg-black" />
       </section>
     </main>
   );

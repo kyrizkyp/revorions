@@ -22,9 +22,12 @@ const Page: React.FC<DetailItemProps> = ({ params }) => {
         <div className="fixed w-full z-20">
           <Navbar
             picture="/logo/rvblack.png"
-            colorsNavbar="bg-white bg-opacity-80"
+            pictureScroll="/logo/rvwhite.png"
+            colorsNavbar="bg-black bg-opacity-80"
             colorsText="text-black"
+            colorsTextScroll="text-white"
             colorsIcon="text-black"
+            colorsIconScroll="text-white"
           />
         </div>
       </section>
@@ -45,7 +48,11 @@ const Page: React.FC<DetailItemProps> = ({ params }) => {
 
       <section>
         <div>
-          <PageLocation place="AUTHENTICITY" classText="text-black" />
+          <PageLocation
+            place="AUTHENTICITY"
+            classText="text-black"
+            bgColor="bg-white"
+          />
         </div>
       </section>
     </main>

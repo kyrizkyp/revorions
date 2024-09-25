@@ -60,7 +60,7 @@ const ArchivesMobile = () => {
   };
 
   return (
-    <div className="w-full px-4 text-white">
+    <div className="w-full px-4">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pb-4">
         {images.slice(0, visibleImages).map((image, index) => (
           <div key={index}>
