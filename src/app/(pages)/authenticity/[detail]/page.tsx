@@ -29,12 +29,12 @@ const Page: React.FC<DetailItemProps> = ({ params }) => {
         <div className="fixed w-full z-20 py-8">
           <Navbar
             picture="/logo/rvblack.png"
+            pictureDropdown="/logo/rvblack.png"
             pictureScroll="/logo/rvwhite.png"
             colorsNavbar="bg-black"
             colorsText="text-black"
+            colorsTextDropdown="text-black"
             colorsTextScroll="text-white"
-            colorsIcon="text-black"
-            colorsIconScroll="text-white"
           />
         </div>
       </section>

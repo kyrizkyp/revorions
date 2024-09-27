@@ -3,13 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { IconBell, IconBellRinging } from "@tabler/icons-react";
 
-interface ModalNotificationProps {
-  classModalNotif: string;
-}
-
-const Notification: React.FC<ModalNotificationProps> = ({
-  classModalNotif,
-}) => {
+const Notification = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [animasiPutar, mengaturAnimasiPutar] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
@@ -46,7 +40,7 @@ const Notification: React.FC<ModalNotificationProps> = ({
         onClick={handleOpenModal}
         className={`transform ${
           animasiPutar ? "rotate-[360deg]" : ""
-        } transition duration-500 ${classModalNotif}`}
+        } transition duration-500`}
       >
         {isModalOpen ? (
           <IconBell className="stroke-[2.2]" />
@@ -64,7 +58,7 @@ const Notification: React.FC<ModalNotificationProps> = ({
         ref={modalRef}
         onClick={klikLuar}
       >
-        <div className="flex flex-col items-center justify-center bg-white p-2 rounded shadow-lg">
+        <div className="flex flex-col items-center justify-center bg-white text-black p-2 rounded shadow-lg">
           <div className="p-4">
             <h1 className="text-center font-mono font-bold">
               Greetings, from us RV.

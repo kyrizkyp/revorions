@@ -22,12 +22,12 @@ export default function Home() {
         <div className="fixed w-full z-40 py-8">
           <Navbar
             picture="/logo/rvwhite.png"
+            pictureDropdown="/logo/rvblack.png"
             pictureScroll="/logo/rvblack.png"
             colorsNavbar="bg-white"
             colorsText="text-white"
+            colorsTextDropdown="text-black"
             colorsTextScroll="text-black"
-            colorsIcon="text-white"
-            colorsIconScroll="text-black"
           />
         </div>
 

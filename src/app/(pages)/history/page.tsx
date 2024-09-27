@@ -26,12 +26,12 @@ const page = () => {
         <div className="fixed z-20 w-full py-8">
           <Navbar
             picture="/logo/rvwhite.png"
+            pictureDropdown="/logo/rvblack.png"
             pictureScroll="/logo/rvblack.png"
             colorsNavbar="bg-white"
             colorsText="text-white"
             colorsTextScroll="text-black"
-            colorsIcon="text-white"
-            colorsIconScroll="text-black"
+            colorsTextDropdown="text-black"
           />
         </div>
       </section>

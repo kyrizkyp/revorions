@@ -6,22 +6,22 @@ import Notification from "./Notification";
 
 interface NavbarProps {
   picture: string;
+  pictureDropdown: string;
   pictureScroll: string;
   colorsNavbar: string;
   colorsText: string;
+  colorsTextDropdown: string;
   colorsTextScroll: string;
-  colorsIcon: string;
-  colorsIconScroll: string;
 }
 
 const Navbar: React.FC<NavbarProps> = ({
   picture,
+  pictureDropdown,
   pictureScroll,
   colorsNavbar,
   colorsText,
+  colorsTextDropdown,
   colorsTextScroll,
-  colorsIcon,
-  colorsIconScroll,
 }) => {
   const [openBrand, setBrand] = useState(false);
   const [openItems, setItems] = useState(false);
@@ -186,12 +186,12 @@ const Navbar: React.FC<NavbarProps> = ({
     openItems ? "translate-y-0" : "-translate-y-full"
   }`;
   return (
-    <header
-      className={`sticky top-0 left-0 right-0 z-10 transition-colors duration-500 ${
-        isScrolledPast ? colorsNavbar : ""
-      }`}
-    >
-      <div className="relative flex items-start justify-between px-4 py-[14px]">
+    <header className="sticky top-0 left-0 right-0 z-10">
+      <div
+        className={`relative flex items-start justify-between px-4 py-[14px] transition-colors duration-500 ${
+          isScrolledPast ? colorsNavbar : ""
+        }`}
+      >
         <Link
           href="/"
           onClick={() => {
@@ -203,22 +203,22 @@ const Navbar: React.FC<NavbarProps> = ({
         >
           <div className="relative w-12 h-12 md:w-16 md:h-16">
             <img
-              src="/logo/rvblack.png"
+              src={isScrolledPast ? pictureScroll : pictureDropdown}
               alt="Rv"
-              className={`absolute m-[6px] transition-opacity duration-700 transform ${
+              className={`absolute m-[6px] ${
                 openMenu || openBrand || openItems ? "opacity-100" : "opacity-0"
               }`}
             />
 
             <div
-              className={`transition-opacity duration-500 transform ${
+              className={`${
                 openMenu || openBrand || openItems ? "opacity-0" : "opacity-100"
               }`}
             >
               <img
                 src={isScrolledPast ? pictureScroll : picture}
                 alt="Rv"
-                className={`absolute m-[6px] transition-opacity duration-500 transform ${
+                className={`absolute m-[6px] ${
                   isScrolledPast ? "opacity-0" : "opacity-100"
                 } ${isScrolledPast ? "opacity-100" : "opacity-0"}`}
               />
@@ -226,60 +226,136 @@ const Navbar: React.FC<NavbarProps> = ({
           </div>
         </Link>
 
-        <div
-          className={`block xl:hidden ${
-            isScrolledPast ? colorsTextScroll : colorsText
-          }`}
-        >
-          <button
-            onClick={openMenuClick}
-            className={`transform ${
-              animationMenu ? "rotate-180" : ""
-            } transition duration-700`}
-          >
-            {openMenu ? (
-              <IconX className="stroke-[2.2] text-black" />
-            ) : (
-              <IconMenu2 className="stroke-[2.2]" />
-            )}
-          </button>
-        </div>
-
-        <div
-          className={`hidden xl:block ${
-            isScrolledPast ? colorsTextScroll : colorsText
-          }`}
-        >
-          <div className="flex items-start space-x-32">
-            <button
-              onClick={openBrandMenu}
-              className={`font-mono font-bold transition-all duration-500 transform ${
-                openMenu || openBrand || openItems ? "text-black" : ""
+        <div className="block xl:hidden">
+          <div className="relative flex items-center justify-center">
+            <div
+              className={`relative ${
+                openMenu || openBrand || openItems ? "opacity-100" : "opacity-0"
               }`}
             >
-              BRAND
-            </button>
+              <button
+                onClick={openMenuClick}
+                className={`transform ${
+                  animationMenu ? "rotate-180" : ""
+                } transition duration-700 ${
+                  isScrolledPast ? colorsTextScroll : colorsTextDropdown
+                }`}
+              >
+                {openMenu ? (
+                  <IconX className="stroke-[2.2]" />
+                ) : (
+                  <IconMenu2 className="stroke-[2.2]" />
+                )}
+              </button>
+            </div>
 
-            <button
-              onClick={openItemsMenu}
-              className={`font-mono font-bold transition-all duration-500 transform ${
-                openMenu || openBrand || openItems ? "text-black" : ""
+            <div
+              className={`absolute ${
+                openMenu || openBrand || openItems ? "opacity-0" : "opacity-100"
               }`}
             >
-              LIFESTYLE
-            </button>
+              <button
+                onClick={openMenuClick}
+                className={`transform ${
+                  animationMenu ? "rotate-180" : ""
+                } transition duration-700 ${
+                  isScrolledPast ? colorsTextScroll : colorsText
+                }`}
+              >
+                {openMenu ? (
+                  <IconX className="stroke-[2.2]" />
+                ) : (
+                  <IconMenu2 className="stroke-[2.2]" />
+                )}
+              </button>
+            </div>
           </div>
         </div>
 
-        <div
-          onClick={openModalNotif}
-          className={isScrolledPast ? colorsIconScroll : colorsIcon}
-        >
-          {openMenu || openBrand || openItems ? (
-            <Notification classModalNotif="text-black" />
-          ) : (
-            <Notification classModalNotif="" />
-          )}
+        <div className="hidden xl:block">
+          <div className="relative flex items-center justify-center">
+            <div
+              className={`relative ${
+                openMenu || openBrand || openItems ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <div className="flex items-start space-x-32">
+                <button
+                  onClick={openBrandMenu}
+                  className={`font-mono font-bold ${
+                    isScrolledPast ? colorsTextScroll : colorsTextDropdown
+                  }`}
+                >
+                  BRAND
+                </button>
+
+                <button
+                  onClick={openItemsMenu}
+                  className={`font-mono font-bold ${
+                    isScrolledPast ? colorsTextScroll : colorsTextDropdown
+                  }`}
+                >
+                  LIFESTYLE
+                </button>
+              </div>
+            </div>
+
+            <div
+              className={`absolute ${
+                openMenu || openBrand || openItems ? "opacity-0" : "opacity-100"
+              }`}
+            >
+              <div className="flex items-start space-x-32">
+                <button
+                  onClick={openBrandMenu}
+                  className={`font-mono font-bold ${
+                    isScrolledPast ? colorsTextScroll : colorsText
+                  }`}
+                >
+                  BRAND
+                </button>
+
+                <button
+                  onClick={openItemsMenu}
+                  className={`font-mono font-bold ${
+                    isScrolledPast ? colorsTextScroll : colorsText
+                  }`}
+                >
+                  LIFESTYLE
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative flex items-center justify-center">
+          <div
+            className={`relative ${
+              openMenu || openBrand || openItems ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <div
+              onClick={openModalNotif}
+              className={`${
+                isScrolledPast ? colorsTextScroll : colorsTextDropdown
+              }`}
+            >
+              <Notification />
+            </div>
+          </div>
+
+          <div
+            className={`absolute ${
+              openMenu || openBrand || openItems ? "opacity-0" : "opacity-100"
+            }`}
+          >
+            <div
+              onClick={openModalNotif}
+              className={`${isScrolledPast ? colorsTextScroll : colorsText}`}
+            >
+              <Notification />
+            </div>
+          </div>
         </div>
       </div>
 
