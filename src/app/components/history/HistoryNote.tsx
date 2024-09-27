@@ -2,20 +2,21 @@ import React from "react";
 
 const HistoryNote = () => {
   return (
-    <div className="w-full px-4">
-      <div className="flex items-start justify-start gap-10 lg:gap-6 xl:gap-10">
+    <div className="max-w-7xl mx-auto">
+      <div className="flex flex-col space-y-6">
         <div className="text-left">
-          <h1 className="font-mono font-bold">REVORIONS</h1>
+          <h1 className="font-mono font-bold">REVORIONS INDEPENDENT</h1>
           <h2 className="font-mono font-bold">•</h2>
         </div>
 
         <div className="max-w-sm md:max-w-md lg:max-w-md xl:max-w-xl">
           <p className="font-mono text-xs md:text-sm text-left">
-            Our designs reflect a dynamic personality, where every detail is
-            considered to provide a unique fashion experience. We believe that
-            fashion is self-expression, and each item from our collection is
-            created to give the wearer confidence. RV Evolutions not only keeps
-            up with trends, but also sets new standards in the world of fashion.
+            REVORIONS was born from a strong spirit of independence. Founded as
+            a brand that promotes freedom of expression, REVORIONS is not bound
+            by temporary trends. Each collection produced carries a bold
+            character, depicting independence and uniqueness. We are committed
+            to continuing to create work without limitations, with a focus on
+            quality and innovation.
           </p>
         </div>
       </div>

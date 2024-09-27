@@ -1,4 +1,7 @@
 import React from "react";
+import { Metadata } from "next";
+
+import TimeZone from "../../../components/navigasi/TimeZone";
 import Navbar from "../../../components/navigasi/Navbar";
 import CheckID from "../../../components/searchID/CheckID";
 import Footer from "../../../components/navigasi/Footer";
@@ -10,7 +13,7 @@ interface DetailItemProps {
   };
 }
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "AUTHENTICITY",
   description: "Unique id code as a marker.",
 };
@@ -19,11 +22,15 @@ const Page: React.FC<DetailItemProps> = ({ params }) => {
   return (
     <main className="min-h-screen flex flex-col">
       <section className="relative">
-        <div className="fixed w-full z-20">
+        <div className="fixed w-full z-50">
+          <TimeZone />
+        </div>
+
+        <div className="fixed w-full z-20 py-8">
           <Navbar
             picture="/logo/rvblack.png"
             pictureScroll="/logo/rvwhite.png"
-            colorsNavbar="bg-black bg-opacity-80"
+            colorsNavbar="bg-black"
             colorsText="text-black"
             colorsTextScroll="text-white"
             colorsIcon="text-black"

@@ -187,11 +187,11 @@ const Navbar: React.FC<NavbarProps> = ({
   }`;
   return (
     <header
-      className={`sticky top-0 left-0 right-0 z-10 transition-colors duration-300 ${
+      className={`sticky top-0 left-0 right-0 z-10 transition-colors duration-500 ${
         isScrolledPast ? colorsNavbar : ""
       }`}
     >
-      <div className="relative flex items-start justify-between p-4">
+      <div className="relative flex items-start justify-between px-4 py-[14px]">
         <Link
           href="/"
           onClick={() => {
@@ -199,7 +199,7 @@ const Navbar: React.FC<NavbarProps> = ({
             closeBrandMenu();
             closeItemsMenu();
           }}
-          className="absolute top-[6px] md:top-[2px] left-1/2 transform -translate-x-1/2"
+          className="absolute top-[6px] md:top-[4px] left-1/2 transform -translate-x-1/2"
         >
           <div className="relative w-12 h-12 md:w-16 md:h-16">
             <img
@@ -211,24 +211,16 @@ const Navbar: React.FC<NavbarProps> = ({
             />
 
             <div
-              className={`transition-opacity duration-700 transform ${
+              className={`transition-opacity duration-500 transform ${
                 openMenu || openBrand || openItems ? "opacity-0" : "opacity-100"
               }`}
             >
               <img
-                src={picture}
+                src={isScrolledPast ? pictureScroll : picture}
                 alt="Rv"
-                className={`absolute m-[6px] transition-opacity duration-700 transform ${
+                className={`absolute m-[6px] transition-opacity duration-500 transform ${
                   isScrolledPast ? "opacity-0" : "opacity-100"
-                }`}
-              />
-
-              <img
-                src={pictureScroll}
-                alt="Rv"
-                className={`absolute m-[6px] transition-opacity duration-700 transform ${
-                  isScrolledPast ? "opacity-100" : "opacity-0"
-                }`}
+                } ${isScrolledPast ? "opacity-100" : "opacity-0"}`}
               />
             </div>
           </div>
@@ -246,7 +238,7 @@ const Navbar: React.FC<NavbarProps> = ({
             } transition duration-700`}
           >
             {openMenu ? (
-              <IconX className="stroke-[2.2]" />
+              <IconX className="stroke-[2.2] text-black" />
             ) : (
               <IconMenu2 className="stroke-[2.2]" />
             )}
@@ -261,7 +253,7 @@ const Navbar: React.FC<NavbarProps> = ({
           <div className="flex items-start space-x-32">
             <button
               onClick={openBrandMenu}
-              className={`font-mono font-bold transition-all duration-700 transform ${
+              className={`font-mono font-bold transition-all duration-500 transform ${
                 openMenu || openBrand || openItems ? "text-black" : ""
               }`}
             >
@@ -270,7 +262,7 @@ const Navbar: React.FC<NavbarProps> = ({
 
             <button
               onClick={openItemsMenu}
-              className={`font-mono font-bold transition-all duration-700 transform ${
+              className={`font-mono font-bold transition-all duration-500 transform ${
                 openMenu || openBrand || openItems ? "text-black" : ""
               }`}
             >

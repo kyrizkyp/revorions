@@ -1,9 +1,12 @@
+import { Metadata } from "next";
+
+import TimeZone from "./components/navigasi/TimeZone";
 import Navbar from "./components/navigasi/Navbar";
 import HomeHero from "./components/homepage/HomeHero";
 import Footer from "./components/navigasi/Footer";
 import PageLocation from "./components/navigasi/PageLocation";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "REVORIONS",
   description: "Liven up every moment with a revolutionary fashion twist.",
 };
@@ -12,11 +15,15 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black">
       <section className="relative">
-        <div className="fixed w-full z-40">
+        <div className="fixed w-full z-50">
+          <TimeZone />
+        </div>
+
+        <div className="fixed w-full z-40 py-8">
           <Navbar
             picture="/logo/rvwhite.png"
             pictureScroll="/logo/rvblack.png"
-            colorsNavbar="bg-white bg-opacity-80"
+            colorsNavbar="bg-white"
             colorsText="text-white"
             colorsTextScroll="text-black"
             colorsIcon="text-white"

@@ -1,5 +1,7 @@
 import React from "react";
+import { Metadata } from "next";
 
+import TimeZone from "../../components/navigasi/TimeZone";
 import Navbar from "../../components/navigasi/Navbar";
 import Archives from "../../components/archives/Archives";
 import ArchivesMobile from "../../components/archives/ArchivesMobile";
@@ -7,7 +9,7 @@ import ArchivesMedium from "../../components/archives/ArchivesMedium";
 import Footer from "../../components/navigasi/Footer";
 import PageLocation from "../../components/navigasi/PageLocation";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "ARCHIVES",
   description: "Each collection is a story",
 };
@@ -16,11 +18,15 @@ const page = () => {
   return (
     <main className="min-h-screen flex flex-col">
       <section className="relative">
-        <div className="fixed w-full z-20">
+        <div className="fixed w-full z-50">
+          <TimeZone />
+        </div>
+
+        <div className="fixed w-full z-20 py-8">
           <Navbar
             picture="/logo/rvblack.png"
             pictureScroll="/logo/rvwhite.png"
-            colorsNavbar="bg-black bg-opacity-80"
+            colorsNavbar="bg-black"
             colorsText="text-black"
             colorsTextScroll="text-white"
             colorsIcon="text-black"

@@ -7,7 +7,7 @@ const HistoryHero = () => {
   return (
     <div className="flex flex-col">
       <div
-        className="fixed -z-40 flex items-center justify-center w-full h-96 bg-cover bg-center"
+        className="fixed -z-40 flex items-center justify-center w-full min-h-screen bg-cover bg-center"
         style={{
           backgroundImage: `url(${background})`,
           backgroundSize: "cover",

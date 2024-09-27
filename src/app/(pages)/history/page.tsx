@@ -1,4 +1,6 @@
 import React from "react";
+
+import TimeZone from "../../components/navigasi/TimeZone";
 import Navbar from "../../components/navigasi/Navbar";
 import HistoryHero from "../../components/history/HistoryHero";
 import History from "../../components/history/History";
@@ -17,15 +19,19 @@ const page = () => {
   return (
     <main className="min-h-screen flex flex-col">
       <section>
-        <div className="fixed z-20 w-full">
+        <div className="fixed w-full z-50">
+          <TimeZone />
+        </div>
+
+        <div className="fixed z-20 w-full py-8">
           <Navbar
             picture="/logo/rvwhite.png"
-            pictureScroll="/logo/rvwhite.png"
-            colorsNavbar="bg-black bg-opacity-80"
+            pictureScroll="/logo/rvblack.png"
+            colorsNavbar="bg-white"
             colorsText="text-white"
-            colorsTextScroll="text-white"
+            colorsTextScroll="text-black"
             colorsIcon="text-white"
-            colorsIconScroll="text-white"
+            colorsIconScroll="text-black"
           />
         </div>
       </section>

@@ -85,7 +85,7 @@ const HomeHero = () => {
     <div
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
-      className="flex items-center justify-center w-full h-screen overflow-hidden bg-cover bg-center transition-all duration-1000 ease-in-out"
+      className="flex items-center justify-center w-full min-h-screen overflow-hidden bg-cover bg-center transition-all duration-1000 ease-in-out"
       style={{
         backgroundImage: `url(${background[currentIndex]})`,
         backgroundSize: "cover",
