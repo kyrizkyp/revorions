@@ -14,7 +14,7 @@ const PageLocation: React.FC<PageLocationProps> = ({
   const currentYear = new Date().getFullYear();
   return (
     <div className={`w-full ${bgColor}`}>
-      <div className="flex items-start justify-between py-2 px-4">
+      <div className="flex items-start justify-between p-4">
         <div className={classText}>
           <p className="text-left font-mono text-xs md:text-sm">
             &copy;&lsquo;2024&lsquo;-{currentYear}

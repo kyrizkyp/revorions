@@ -30,11 +30,11 @@ const Page: React.FC<DetailItemProps> = ({ params }) => {
           <Navbar
             picture="/logo/rvblack.png"
             pictureDropdown="/logo/rvblack.png"
-            pictureScroll="/logo/rvwhite.png"
-            colorsNavbar="bg-black"
+            pictureScroll="/logo/rvblack.png"
+            colorsNavbar="bg-white"
             colorsText="text-black"
             colorsTextDropdown="text-black"
-            colorsTextScroll="text-white"
+            colorsTextScroll="text-black"
           />
         </div>
       </section>
@@ -57,8 +57,8 @@ const Page: React.FC<DetailItemProps> = ({ params }) => {
         <div>
           <PageLocation
             place="AUTHENTICITY"
-            classText="text-black"
-            bgColor="bg-white"
+            classText="text-white"
+            bgColor="bg-black"
           />
         </div>
       </section>

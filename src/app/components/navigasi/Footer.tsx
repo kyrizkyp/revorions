@@ -1,5 +1,6 @@
 "use client";
 
+import { IconDotsVertical } from "@tabler/icons-react";
 import Link from "next/link";
 import React, { useState } from "react";
 
@@ -26,66 +27,87 @@ const Footer: React.FC<FooterProps> = ({ bgColor, textColor }) => {
 
   return (
     <div
-      className={`h-52 p-4 flex flex-col items-start justify-start ${bgColor}`}
+      className={`h-fullw-full p-4 flex flex-col md:flex-row justify-between ${bgColor}`}
     >
-      <div className={`py-2 ${textColor}`}>
+      <div className="w-full md:w-1/2">
         <div
-          className="cursor-pointer"
+          className={`py-2 w-full cursor-pointer ${textColor}`}
           onClick={() => toggleSection("contact")}
         >
-          <h2 className="font-mono">CONTACT</h2>
-        </div>
-        <div
-          className={`overflow-hidden transition-all duration-500 ease-in-out ${
-            openSection === "contact" ? "max-h-[60px]" : "max-h-0"
-          }`}
-        >
-          <div className="p-2">
-            <div className="py-[2px]">
-              <p className="font-mono text-sm">ID 082345678345</p>
+          <div className="w-full flex items-center justify-between">
+            <div className="text-left">
+              <h1 className="font-mono">CONTACT</h1>
             </div>
 
-            <div className="py-[2px]">
-              <a href="/email" target="_blank" className="font-mono text-sm">
-                EMAIL US
-              </a>
-            </div>
+            <IconDotsVertical className="w-4 h-4" />
           </div>
-        </div>
-      </div>
 
-      <div className={`py-2 ${textColor}`}>
-        <div
-          className="cursor-pointer"
-          onClick={() => toggleSection("followUs")}
-        >
-          <h1 className="font-mono">FOLLOW US</h1>
-        </div>
-        <div
-          className={`overflow-hidden transition-all duration-500 ease-in-out ${
-            openSection === "followUs" ? "max-h-[60px]" : "max-h-0"
-          }`}
-        >
-          <div className="p-2">
-            {socialLinks.map((link, index) => (
-              <div key={index} className="py-[2px]">
-                <a
-                  href={link.url}
-                  target="_blank"
-                  className="font-mono text-xs"
-                >
-                  {link.name}
+          <div
+            className={`overflow-hidden transition-all duration-500 ease-in-out ${
+              openSection === "contact" ? "max-h-[74px]" : "max-h-0"
+            }`}
+          >
+            <div className="p-4">
+              <div className="py-[2px]">
+                <p className="font-mono text-sm">ID 082345678345</p>
+              </div>
+
+              <div className="py-[2px]">
+                <a href="/email" target="_blank" className="font-mono text-sm">
+                  EMAIL US
                 </a>
               </div>
-            ))}
+            </div>
           </div>
+        </div>
+
+        <div
+          className={`py-2 w-full cursor-pointer ${textColor}`}
+          onClick={() => toggleSection("followUs")}
+        >
+          <div className="w-full flex items-center justify-between">
+            <div className="text-left">
+              <h2 className="font-mono">FOLLOW US</h2>
+            </div>
+
+            <IconDotsVertical className="w-4 h-4" />
+          </div>
+
+          <div
+            className={`overflow-hidden transition-all duration-500 ease-in-out ${
+              openSection === "followUs" ? "max-h-[74px]" : "max-h-0"
+            }`}
+          >
+            <div className="p-2">
+              {socialLinks.map((link, index) => (
+                <div key={index} className="py-[2px]">
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    className="font-mono text-xs"
+                  >
+                    {link.name}
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className={`py-2 ${textColor}`}>
+          <Link href="" className="font-mono">
+            BRAND ORIGIN
+          </Link>
         </div>
       </div>
 
-      <div className={`py-2 ${textColor}`}>
-        <Link href="" className="font-mono">
-          BRAND ORIGIN
-        </Link>
+      <div className="w-full md:w-1/2">
+        <p className={textColor}>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi id
+          voluptas numquam! Lorem ipsum dolor, sit amet consectetur adipisicing
+          elit. Odit facilis officia, neque aperiam incidunt cumque culpa
+          ducimus atque. Aspernatur, necessitatibus?
+        </p>
       </div>
     </div>
   );
