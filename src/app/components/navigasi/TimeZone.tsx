@@ -58,7 +58,7 @@ const TimeZone = () => {
     const timeIntervalId = setInterval(updateTime, 1000);
     const messageIntervalId = setInterval(() => {
       setShowMessage((prev) => !prev);
-    }, 4000);
+    }, 10000);
 
     return () => {
       clearInterval(timeIntervalId);
@@ -83,7 +83,7 @@ const TimeZone = () => {
 
         <div className="relative w-full mx-auto flex items-center justify-center">
           <div
-            className={`relative text-center text-xs md:text-sm transition-opacity duration-700 ease-in-out ${
+            className={`relative text-center text-xs md:text-sm transition-opacity duration-1000 ease-in-out ${
               showMessage ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -93,7 +93,7 @@ const TimeZone = () => {
           </div>
 
           <div
-            className={`absolute transition-opacity duration-700 ease-in-out ${
+            className={`absolute transition-opacity duration-1000 ease-in-out ${
               showMessage ? "opacity-0" : "opacity-100"
             }`}
           >

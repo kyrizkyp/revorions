@@ -1,6 +1,6 @@
 "use client";
 
-import { IconSearch } from "@tabler/icons-react";
+import { IconLoader, IconSearch } from "@tabler/icons-react";
 import React, { useState } from "react";
 import IDcode from "../../DataID/IDcode.json";
 import NotFoundID from "../../DataID/NotFoundID";
@@ -50,6 +50,7 @@ const SearchValidID = () => {
     if (/^\d*$/.test(value) && value.length <= 12) {
       setInputValue(value);
       setErrorMessage("");
+      setSearchLink("");
     }
   };
 
@@ -83,7 +84,9 @@ const SearchValidID = () => {
         )}
 
         {isLoading ? (
-          <p className="text-blue-500">Loading...</p>
+          <div className="animate-spin">
+            <IconLoader />
+          </div>
         ) : (
           searchLink && (
             <Link href={searchLink} className="font-mono font-bold text-sm">
