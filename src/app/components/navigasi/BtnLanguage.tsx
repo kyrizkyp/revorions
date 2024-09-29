@@ -1,48 +1,77 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const BtnLanguage = () => {
-  const [currentLang, setCurrentLang] = useState("");
-
   const languages = ["en", "id"];
+  const router = useRouter();
+
+  const [currentLang, setCurrentLang] = useState<string | null>(null);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
-    const storedLang = localStorage.getItem("i18nlang");
-    if (storedLang && languages.includes(storedLang)) {
-      setCurrentLang(storedLang);
-
-      const urlLang = window.location.pathname.split("/")[1];
-      if (urlLang !== storedLang) {
-        const newPath = window.location.pathname.replace(
-          /^\/(en|id)/,
-          `/${storedLang}`
-        );
-        window.location.href = newPath;
+    if (typeof window !== "undefined") {
+      const storedLang = localStorage.getItem("i18nlang");
+      if (storedLang && languages.includes(storedLang)) {
+        setCurrentLang(storedLang);
+      } else {
+        setCurrentLang(languages[0]);
       }
     }
   }, []);
 
+  useEffect(() => {
+    if (currentLang) {
+      const urlLang = window.location.pathname.split("/")[1];
+      if (urlLang !== currentLang) {
+        const newPath = window.location.pathname.replace(
+          /^\/(en|id)/,
+          `/${currentLang}`
+        );
+        router.push(newPath);
+      }
+    }
+  }, [currentLang, router]);
+
   const changeLanguage = (newLocale: string) => {
     localStorage.setItem("i18nlang", newLocale);
     setCurrentLang(newLocale);
-
-    const newPath = window.location.pathname.replace(
-      /^\/(en|id)/,
-      `/${newLocale}`
-    );
-    window.location.href = newPath;
+    setDropdownOpen(false);
   };
 
   return (
-    <div>
-      {languages.map((lang) => (
-        <button
-          key={lang}
-          onClick={() => changeLanguage(lang)}
-          className={`px-1 ${currentLang === lang ? "font-bold" : ""}`}
-        >
-          {lang.toUpperCase()}
-        </button>
-      ))}
+    <div className="relative">
+      <button onClick={() => setDropdownOpen(!dropdownOpen)}>
+        {currentLang && (
+          <Image
+            src={`/images/lang/${currentLang}.png`}
+            alt={`${currentLang} flag`}
+            width={25}
+            height={25}
+          />
+        )}
+      </button>
+
+      <div
+        className={`absolute w-10 bg-gray-200 rounded shadow-lg overflow-hidden transition-all duration-500 ease-in-out ${
+          dropdownOpen ? "max-h-[80px] bg-opacity-100" : "max-h-0 bg-opacity-0"
+        }`}
+      >
+        {languages.map((lang) => (
+          <button
+            key={lang}
+            onClick={() => changeLanguage(lang)}
+            className="p-2 cursor-pointer hover:bg-gray-200"
+          >
+            <Image
+              src={`/images/lang/${lang}.png`}
+              alt="lang"
+              width={30}
+              height={30}
+            />
+          </button>
+        ))}
+      </div>
     </div>
   );
 };
