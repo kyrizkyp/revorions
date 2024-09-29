@@ -21,8 +21,15 @@ const Footer: React.FC<FooterProps> = ({ bgColor, textColor }) => {
   };
 
   const socialLinks = [
-    { name: "INSTAGRAM", url: "/instagram" },
-    { name: "TIKTOK", url: "/tiktok" },
+    {
+      name: "INSTAGRAM",
+      url: "https://www.instagram.com/revorions/?igsh=MWQ0MmdlNnI2cmNwMw%3D%3D",
+    },
+    {
+      name: "TIKTOK",
+      url: "https://www.tiktok.com/@revorions?_t=8q7ZqkI9x6G&_r=1",
+    },
+    { name: "YOUTUBE", url: "https://www.youtube.com/@revorions" },
   ];
 
   return (
@@ -75,7 +82,7 @@ const Footer: React.FC<FooterProps> = ({ bgColor, textColor }) => {
 
           <div
             className={`overflow-hidden transition-all duration-500 ease-in-out ${
-              openSection === "followUs" ? "max-h-[74px]" : "max-h-0"
+              openSection === "followUs" ? "max-h-[86px]" : "max-h-0"
             }`}
           >
             <div className="p-2">

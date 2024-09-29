@@ -1,8 +1,12 @@
-import { IconChevronLeft } from "@tabler/icons-react";
-import Link from "next/link";
+"use client";
+
 import React from "react";
+import { IconChevronLeft } from "@tabler/icons-react";
+import { useDictionary } from "../DictionaryProvider";
+import Link from "next/link";
 
 const Authenticity = () => {
+  const t = useDictionary();
   return (
     <div className="w-full px-4">
       <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center md:justify-between">
@@ -16,19 +20,12 @@ const Authenticity = () => {
 
         <div className="flex items-start gap-10 xl:gap-32">
           <div className="text-left">
-            <h1 className="font-mono font-bold">AUTHENTICITY</h1>
+            <h1 className="font-mono font-bold">{t.authenticity.title1}</h1>
             <p className="font-mono text-sm">&lsquo;PAGE&lsquo;</p>
           </div>
 
           <div className="max-w-xl xl:max-w-2xl">
-            <p className="font-mono text-sm">
-              We understand how important the authenticity and exclusivity of
-              each of our products is. Therefore, each of our clothing items
-              comes with a unique serial number ensuring that you are getting a
-              genuine product from RV. This serial number is not just
-              identification, but also a guarantee that you are getting the
-              quality and design that we have carefully designed.
-            </p>
+            <p className="font-mono text-sm">{t.authenticity.desc1}</p>
           </div>
         </div>
 

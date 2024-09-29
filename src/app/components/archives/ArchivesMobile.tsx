@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { useDictionary } from "../DictionaryProvider";
 
 const ArchivesMobile = () => {
   const images = [
@@ -59,6 +60,7 @@ const ArchivesMobile = () => {
     setVisibleImages((prevVisibleImages) => prevVisibleImages + 4);
   };
 
+  const t = useDictionary();
   return (
     <div className="w-full px-4">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pb-4">
@@ -77,10 +79,10 @@ const ArchivesMobile = () => {
       {visibleImages < images.length && (
         <div className="flex items-center justify-center py-4">
           <button
-            className="font-mono font-bold text-center"
+            className="font-mono text-center px-4 py-2 bg-black text-white"
             onClick={loadMoreImages}
           >
-            LOAD MORE
+            {t.archives.btnLoad}
           </button>
         </div>
       )}

@@ -1,20 +1,20 @@
 import React from "react";
 import { Metadata } from "next";
 
-import TimeZone from "../../components/navigasi/TimeZone";
-import Navbar from "../../components/navigasi/Navbar";
-import Archives from "../../components/archives/Archives";
-import ArchivesMobile from "../../components/archives/ArchivesMobile";
-import ArchivesMedium from "../../components/archives/ArchivesMedium";
-import Footer from "../../components/navigasi/Footer";
-import PageLocation from "../../components/navigasi/PageLocation";
+import TimeZone from "../../../components/navigasi/TimeZone";
+import Navbar from "../../../components/navigasi/Navbar";
+import Archives from "../../../components/archives/Archives";
+import ArchivesMobile from "../../../components/archives/ArchivesMobile";
+import ArchivesMedium from "../../../components/archives/ArchivesMedium";
+import Footer from "../../../components/navigasi/Footer";
+import PageLocation from "../../../components/navigasi/PageLocation";
 
 export const metadata: Metadata = {
   title: "ARCHIVES",
   description: "Each collection is a story",
 };
 
-const page = () => {
+const Page = () => {
   return (
     <main className="min-h-screen flex flex-col">
       <section className="relative">
@@ -72,4 +72,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -1,14 +1,14 @@
 import React from "react";
 
-import TimeZone from "../../components/navigasi/TimeZone";
-import Navbar from "../../components/navigasi/Navbar";
-import HistoryHero from "../../components/history/HistoryHero";
-import History from "../../components/history/History";
-import HistoryNote from "../../components/history/HistoryNote";
-import HistoryGallery from "../../components/history/HistoryGallery";
-import HistoryDNA from "../../components/history/HistoryDNA";
-import Footer from "../../components/navigasi/Footer";
-import PageLocation from "../../components/navigasi/PageLocation";
+import TimeZone from "../../../components/navigasi/TimeZone";
+import Navbar from "../../../components/navigasi/Navbar";
+import HistoryHero from "../../../components/history/HistoryHero";
+import History from "../../../components/history/History";
+import HistoryNote from "../../../components/history/HistoryNote";
+import HistoryGallery from "../../../components/history/HistoryGallery";
+import HistoryDNA from "../../../components/history/HistoryDNA";
+import Footer from "../../../components/navigasi/Footer";
+import PageLocation from "../../../components/navigasi/PageLocation";
 
 export const metadata = {
   title: "HISTORY",

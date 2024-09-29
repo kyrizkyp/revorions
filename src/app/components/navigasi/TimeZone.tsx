@@ -1,11 +1,14 @@
 "use client";
 import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 import React, { useState, useEffect } from "react";
+import { useDictionary } from "../DictionaryProvider";
 
 const TimeZone = () => {
   const [time, setTime] = useState("");
   const [formattedDate, setFormattedDate] = useState("");
   const [showMessage, setShowMessage] = useState(false);
+
+  const t = useDictionary();
 
   useEffect(() => {
     const updateTime = () => {
@@ -16,15 +19,7 @@ const TimeZone = () => {
         hour12: false,
       };
 
-      const dayNames = [
-        "SUNDAY",
-        "MONDAY",
-        "TUESDAY",
-        "WEDNESDAY",
-        "THURSDAY",
-        "FRIDAY",
-        "SATURDAY",
-      ];
+      const dayNames = t.timeZone.day.split(", ");
 
       const monthNames = [
         "JAN",
@@ -89,9 +84,7 @@ const TimeZone = () => {
               showMessage ? "opacity-100" : "opacity-0"
             }`}
           >
-            <p className="font-mono text-white">
-              THANK YOU FOR VISITING OUR WEBSITE
-            </p>
+            <p className="font-mono text-white">{t.timeZone.say}</p>
           </div>
 
           <div

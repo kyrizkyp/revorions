@@ -3,22 +3,18 @@ import { Metadata } from "next";
 
 import TimeZone from "../../../components/navigasi/TimeZone";
 import Navbar from "../../../components/navigasi/Navbar";
-import CheckID from "../../../components/searchID/CheckID";
+import Authenticity from "../../../components/authenticity/Authenticity";
+import SearchValidID from "../../../components/searchID/SearchValidID";
+import AuthenticityProtection from "../../../components/authenticity/AuthenticityProtection";
 import Footer from "../../../components/navigasi/Footer";
 import PageLocation from "../../../components/navigasi/PageLocation";
-
-interface DetailItemProps {
-  params: {
-    detail: string;
-  };
-}
 
 export const metadata: Metadata = {
   title: "AUTHENTICITY",
   description: "Unique id code as a marker.",
 };
 
-const Page: React.FC<DetailItemProps> = ({ params }) => {
+const page = () => {
   return (
     <main className="min-h-screen flex flex-col">
       <section className="relative">
@@ -40,9 +36,21 @@ const Page: React.FC<DetailItemProps> = ({ params }) => {
       </section>
 
       <section className="flex-grow">
-        <section>
+        <section className="pt-12 md:pt-14 lg:pt-28">
           <div>
-            <CheckID detaiID={params.detail} />
+            <Authenticity />
+          </div>
+        </section>
+
+        <section className="py-10 px-4">
+          <div>
+            <SearchValidID />
+          </div>
+        </section>
+
+        <section className="py-10 px-4">
+          <div>
+            <AuthenticityProtection />
           </div>
         </section>
       </section>
@@ -57,8 +65,8 @@ const Page: React.FC<DetailItemProps> = ({ params }) => {
         <div>
           <PageLocation
             place="AUTHENTICITY"
-            classText="text-white"
-            bgColor="bg-black"
+            classText="text-black"
+            bgColor="bg-white"
           />
         </div>
       </section>
@@ -66,4 +74,4 @@ const Page: React.FC<DetailItemProps> = ({ params }) => {
   );
 };
 
-export default Page;
+export default page;

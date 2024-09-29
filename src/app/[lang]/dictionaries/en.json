@@ -1,0 +1,51 @@
+{
+  "timeZone": {
+    "day": "SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY FRIDAY, SATURDAY",
+    "say": "THANK YOU FOR VISITING OUR WEBSITE"
+  },
+
+  "navigasi": {
+    "brand": "BRAND",
+    "lifestyle": "LIFESTYLE",
+    "title1": "WORLD OF RV",
+    "title2": "CATEGORY 'SOON'",
+    "brand1": "RV HISTORY NOTES",
+    "brand2": "THE ARCHIVES",
+    "brand3": "AUTHENTICITY ITEM",
+    "item1": "ALL OTHER ITEMS",
+    "item2": "PLAIN & T-SHIRTS",
+    "item3": "HOODIE & JACKET",
+    "item4": "SHORTS & TROUSERS"
+  },
+
+  "home": {
+    "title1": "REVORIONS",
+    "desc1": "Liven up every moment with a revolutionary fashion twist, a collection of clothing designed to combine an active and dynamic lifestyle, and each design embodies the spirit of modernity and boldness.",
+
+    "title2": "THE DNA",
+    "desc2": "Orang-orang yang memiliki DNA merek yang sama, yang memahami esensi gaya dan keberanian dalam setiap desain, menghargai inovasi yang membedakan mereka dari orang lain, dan mengekspresikan identitas mereka melalui pilihan fashion yang penuh makna dan karakter.",
+
+    "title3": "LIFE",
+    "desc3": "A reflection of life's journey and the way we express ourselves through style. In every moment of life, the clothes we choose become an extension of who we are, representing courage, creativity and identity."
+  },
+
+  "archives": {
+    "title1": "THE ARCHIVES",
+    "desc1": "Each collection is a story, showcasing evolution and innovation in every design. Inspiration shines behind every detail, depicting a journey of limitless creativity and expression.",
+    "btnLoad": "LOAD MORE"
+  },
+
+  "authenticity": {
+    "title1": "AUTHENTICITY",
+    "desc1": "We understand how important the authenticity and exclusivity of each of our products is. Therefore, each of our clothing items comes with a unique serial number ensuring that you are getting a genuine product from RV. This serial number is not just identification, but also a guarantee that you are getting the quality and design that we have carefully designed.",
+
+    "idDesc": "Enter the 12 digit RV code number in the label tag column below without using the hyphen '-'.",
+
+    "message": "Please enter a 12-digit number.",
+    "check": "CHECK AUTHENTICITY",
+
+    "title2": "AUTHENTICITY PROTECTION",
+    "desc2": "We are committed to maintaining the safety and authenticity of every product we offer. Every item you purchase through our system has gone through a series of rigorous verification processes designed to protect you from counterfeit products. This verification system is an integral part of our efforts to ensure that every product you receive is 100% authentic, made to the highest quality standards, and meets your expectations.",
+    "desc3": "Your trust is the most valuable thing for us. Therefore, we continue to innovate and improve our systems to provide the best protection against counterfeit goods. With our products, you not only get high quality goods, but also the peace of mind that comes with knowing that you have an authentic product, made with the utmost dedication and craftsmanship."
+  }
+}

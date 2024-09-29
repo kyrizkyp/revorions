@@ -1,8 +1,12 @@
+"use client";
+
 import { IconChevronLeft } from "@tabler/icons-react";
+import { useDictionary } from "../DictionaryProvider";
 import Link from "next/link";
 import React from "react";
 
 const Archives = () => {
+  const t = useDictionary();
   return (
     <div className="w-full px-4">
       <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center md:justify-between">
@@ -16,15 +20,11 @@ const Archives = () => {
 
         <div className="flex flex-col items-center justify-center">
           <div className="p-2 text-center">
-            <h1 className="font-mono font-bold">THE ARCHIVES</h1>
+            <h1 className="font-mono font-bold">{t.archives.title1}</h1>
           </div>
 
           <div className="max-w-4xl text-center p-2">
-            <p className="font-mono text-xs md:text-sm">
-              Each collection is a story, showcasing evolution and innovation in
-              every design. Inspiration shines behind every detail, depicting a
-              journey of limitless creativity and expression.
-            </p>
+            <p className="font-mono text-xs md:text-sm">{t.archives.desc1}</p>
           </div>
         </div>
 

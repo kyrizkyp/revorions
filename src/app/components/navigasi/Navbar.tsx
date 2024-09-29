@@ -3,6 +3,9 @@ import { IconMenu2, IconX } from "@tabler/icons-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import Notification from "./Notification";
+import BtnLanguage from "./BtnLanguage";
+import { useDictionary } from "../DictionaryProvider";
+import Image from "next/image";
 
 interface NavbarProps {
   picture: string;
@@ -53,37 +56,39 @@ const Navbar: React.FC<NavbarProps> = ({
     };
   }, []);
 
+  const t = useDictionary();
+
   const menuBrand = [
     {
-      title: "RV HISTORY NOTES",
+      title: t.navigasi.brand1,
       page: "/history",
     },
     {
-      title: "THE ARCHIVES",
+      title: t.navigasi.brand2,
       page: "/archives",
     },
     {
-      title: "ITEM AUTHENTICITY",
+      title: t.navigasi.brand3,
       page: "/authenticity",
     },
   ];
 
   const menuItems = [
     {
-      title: "ALL OTHER ITEMS",
+      title: t.navigasi.item1,
       page: "/",
     },
     {
-      title: "PLAIN & T-SHIRTS",
+      title: t.navigasi.item2,
       page: "/brand",
     },
     {
-      title: "HOODIE & JACKET",
+      title: t.navigasi.item3,
       page: "/items",
     },
 
     {
-      title: "SHORTS & TROUSERS",
+      title: t.navigasi.item4,
       page: "/brand",
     },
   ];
@@ -202,12 +207,14 @@ const Navbar: React.FC<NavbarProps> = ({
           className="absolute top-[6px] md:top-[4px] left-1/2 transform -translate-x-1/2"
         >
           <div className="relative w-12 h-12 md:w-16 md:h-16">
-            <img
+            <Image
               src={isScrolledPast ? pictureScroll : pictureDropdown}
               alt="Rv"
               className={`absolute m-[6px] ${
                 openMenu || openBrand || openItems ? "opacity-100" : "opacity-0"
               }`}
+              width={300}
+              height={200}
             />
 
             <div
@@ -215,12 +222,14 @@ const Navbar: React.FC<NavbarProps> = ({
                 openMenu || openBrand || openItems ? "opacity-0" : "opacity-100"
               }`}
             >
-              <img
+              <Image
                 src={isScrolledPast ? pictureScroll : picture}
                 alt="Rv"
                 className={`absolute m-[6px] ${
                   isScrolledPast ? "opacity-0" : "opacity-100"
                 } ${isScrolledPast ? "opacity-100" : "opacity-0"}`}
+                width={300}
+                height={200}
               />
             </div>
           </div>
@@ -286,7 +295,7 @@ const Navbar: React.FC<NavbarProps> = ({
                     isScrolledPast ? colorsTextScroll : colorsTextDropdown
                   }`}
                 >
-                  BRAND
+                  {t.navigasi.brand}
                 </button>
 
                 <button
@@ -295,7 +304,7 @@ const Navbar: React.FC<NavbarProps> = ({
                     isScrolledPast ? colorsTextScroll : colorsTextDropdown
                   }`}
                 >
-                  LIFESTYLE
+                  {t.navigasi.lifestyle}
                 </button>
               </div>
             </div>
@@ -312,7 +321,7 @@ const Navbar: React.FC<NavbarProps> = ({
                     isScrolledPast ? colorsTextScroll : colorsText
                   }`}
                 >
-                  BRAND
+                  {t.navigasi.brand}
                 </button>
 
                 <button
@@ -321,39 +330,45 @@ const Navbar: React.FC<NavbarProps> = ({
                     isScrolledPast ? colorsTextScroll : colorsText
                   }`}
                 >
-                  LIFESTYLE
+                  {t.navigasi.lifestyle}
                 </button>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="relative flex items-center justify-center">
-          <div
-            className={`relative ${
-              openMenu || openBrand || openItems ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <div
-              onClick={openModalNotif}
-              className={`${
-                isScrolledPast ? colorsTextScroll : colorsTextDropdown
-              }`}
-            >
-              <Notification />
-            </div>
+        <div className="flex items-start gap-4 justify-center">
+          <div>
+            <BtnLanguage />
           </div>
 
-          <div
-            className={`absolute ${
-              openMenu || openBrand || openItems ? "opacity-0" : "opacity-100"
-            }`}
-          >
+          <div className="relative flex items-center justify-center">
             <div
-              onClick={openModalNotif}
-              className={`${isScrolledPast ? colorsTextScroll : colorsText}`}
+              className={`relative ${
+                openMenu || openBrand || openItems ? "opacity-100" : "opacity-0"
+              }`}
             >
-              <Notification />
+              <div
+                onClick={openModalNotif}
+                className={`${
+                  isScrolledPast ? colorsTextScroll : colorsTextDropdown
+                }`}
+              >
+                <Notification />
+              </div>
+            </div>
+
+            <div
+              className={`absolute ${
+                openMenu || openBrand || openItems ? "opacity-0" : "opacity-100"
+              }`}
+            >
+              <div
+                onClick={openModalNotif}
+                className={`${isScrolledPast ? colorsTextScroll : colorsText}`}
+              >
+                <Notification />
+              </div>
             </div>
           </div>
         </div>
@@ -376,7 +391,7 @@ const Navbar: React.FC<NavbarProps> = ({
             <div className="flex flex-col items-start">
               <div className="pb-4">
                 <div className="p-[2px]">
-                  <p className="font-mono">WORLD OF RV</p>
+                  <p className="font-mono">{t.navigasi.title1}</p>
                 </div>
 
                 <div className="p-[12px] flex flex-col items-start justify-center">
@@ -395,7 +410,7 @@ const Navbar: React.FC<NavbarProps> = ({
 
               <div className="pt-4">
                 <div className="p-[2px]">
-                  <p className="font-mono">LIFESTYLE &lsquo;SOON&lsquo;</p>
+                  <p className="font-mono">{t.navigasi.title2}</p>
                 </div>
 
                 <div className="p-[12px] flex flex-col items-start justify-center">
@@ -419,7 +434,7 @@ const Navbar: React.FC<NavbarProps> = ({
         <div className="w-full px-4 mt-8">
           <div className="w-full flex flex-col items-start">
             <div className="px-[2px] py-4 font-mono">
-              <p className="text-[18px]">WORLD OF RV</p>
+              <p className="text-[18px]">{t.navigasi.title1}</p>
             </div>
 
             <div className="p-4 flex flex-col items-start justify-center">
@@ -442,7 +457,7 @@ const Navbar: React.FC<NavbarProps> = ({
         <div className="w-full px-4 mt-8">
           <div className="w-full flex flex-col items-start">
             <div className="p-[2px] font-mono">
-              <p className="text-[18px]">CATEGORY &lsquo;SOON&lsquo;</p>
+              <p className="text-[18px]">{t.navigasi.title2}</p>
             </div>
 
             <div className="p-4 flex flex-col items-start justify-center">

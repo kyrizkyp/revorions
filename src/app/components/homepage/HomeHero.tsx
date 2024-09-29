@@ -1,27 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-
-const konten = [
-  {
-    title: "REVOLIONS",
-    description:
-      "Liven up every moment with a revolutionary fashion twist, a collection of clothing designed to combine an active and dynamic lifestyle, and each design embodies the spirit of modernity and boldness.",
-    order: "001",
-  },
-  {
-    title: "THE DNA",
-    description:
-      "People who share the brand's DNA, who understand the essence of style and boldness in every design, appreciate innovation that differentiates them from others, and express their identity through fashion choices that are full of meaning and character.",
-    order: "002",
-  },
-  {
-    title: "LIFE",
-    description:
-      "A reflection of life's journey and the way we express ourselves through style. In every moment of life, the clothes we choose become an extension of who we are, representing courage, creativity and identity.",
-    order: "003",
-  },
-];
+import { useDictionary } from "../DictionaryProvider";
 
 const background = [
   "https://fastly.picsum.photos/id/808/1920/1080.jpg?hmac=F5GHMKc6mj7fz0ZmTCySRPYFVY8gV2VaoFz16-ONrug",
@@ -32,6 +12,25 @@ const background = [
 ];
 
 const HomeHero = () => {
+  const t = useDictionary();
+
+  const konten = [
+    {
+      title: t.home.title1,
+      description: t.home.desc1,
+      order: "001",
+    },
+    {
+      title: t.home.title2,
+      description: t.home.desc2,
+      order: "002",
+    },
+    {
+      title: t.home.title3,
+      description: t.home.desc3,
+      order: "003",
+    },
+  ];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [prevIndex, setPrevIndex] = useState(konten.length - 1);
   const [touchStartX, setTouchStartX] = useState(0);

@@ -1,0 +1,51 @@
+{
+    "timeZone": {
+     "day": "MINGGU, SENIN, SELASA, RABU, KAMIS, JUM'AT, SABTU",
+     "say": "TERIMA KASIH TELAH MENGUNJUNGI WEBSITE KAMI"
+    },
+
+    "navigasi": {
+     "brand": "MEREK",
+     "lifestyle": "GAYA HIDUP",
+     "title1": "DUNIA RV",
+     "title2": "KATEGORI 'SEGERA'",
+     "brand1": "CATATAN SEJARAH RV",
+     "brand2": "ARSIP",
+     "brand3": "KEAUTENTIKAN BARANG",
+     "item1": "SEMUA ITEM LAINNYA",
+     "item2": "KAOS POLOS & KAOS",
+     "item3": "HOODIE & JAKET",
+     "item4": "CELANA PENDEK & PANJANG"
+   },
+
+    "home": {
+      "title1": "REVORIONS",
+      "desc1": "Hidupkan setiap momen dengan sentuhan fashion yang revolusioner, koleksi pakaian yang dirancang untuk memadukan gaya hidup aktif dan dinamis, dan setiap desain mewujudkan semangat modernitas dan keberanian.",
+
+      "title2": "DNA-nya",
+      "desc2": "Orang-orang yang memiliki DNA merek yang sama, yang memahami esensi gaya dan keberanian dalam setiap desain, menghargai inovasi yang membedakan mereka dari orang lain, dan mengekspresikan identitas mereka melalui pilihan fashion yang penuh makna dan karakter.",
+
+      "title3": "KEHIDUPAN",
+      "desc3": "Sebuah cerminan perjalanan hidup dan cara kita mengekspresikan diri melalui gaya. Dalam setiap momen kehidupan, pakaian yang kita pilih menjadi perpanjangan dari diri kita, melambangkan keberanian, kreativitas, dan identitas."
+    },
+
+    "archives": {
+    "title1": "ARSIP",
+    "desc1": "Setiap koleksi adalah sebuah cerita, menampilkan evolusi dan inovasi dalam setiap desain. Inspirasi terpancar di balik setiap detail, menggambarkan perjalanan kreativitas dan ekspresi tanpa batas.",
+    "btnLoad": "MUAT LEBIH BANYAK"
+    },
+
+    "authenticity": {
+    "title1": "KEASLIAN",
+    "desc1": "Kami memahami betapa pentingnya keaslian dan eksklusivitas setiap produk kami. Oleh karena itu, setiap item pakaian kami dilengkapi dengan nomor seri unik yang memastikan bahwa Anda mendapatkan produk asli dari RV. Nomor seri ini bukan sekedar tanda pengenal, tetapi juga jaminan bahwa Anda mendapatkan kualitas dan desain yang telah kami rancang dengan cermat.",
+
+    "idDesc": "Masukkan 12 digit angka kode RV, pada kolom tag label di bawah tanpa menggunakan tanda hubung '-'.",
+
+    "message": "Harap masukkan nomor 12 digit.",
+    "check": "PERIKSA KEASLIAN",
+
+    "title2": "PERLINDUNGAN KEASLIAN",
+    "desc2": "Kami berkomitmen untuk menjaga keamanan dan keaslian setiap produk yang kami tawarkan. Setiap barang yang Anda beli melalui sistem kami telah melalui serangkaian proses verifikasi ketat yang dirancang untuk melindungi Anda dari produk palsu. Sistem verifikasi ini merupakan bagian integral dari upaya kami untuk memastikan bahwa setiap produk yang Anda terima adalah 100% asli, dibuat dengan standar kualitas tertinggi, dan memenuhi harapan Anda.",
+    "desc3": "Kepercayaan Anda adalah hal yang paling berharga bagi kami. Oleh karena itu, kami terus berinovasi dan menyempurnakan sistem kami untuk memberikan perlindungan terbaik terhadap barang palsu. Dengan produk kami, Anda tidak hanya mendapatkan barang berkualitas tinggi, tetapi juga ketenangan pikiran karena mengetahui bahwa Anda memiliki produk asli, dibuat dengan dedikasi dan keahlian maksimal."
+    }
+}

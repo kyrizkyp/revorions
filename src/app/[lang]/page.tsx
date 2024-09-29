@@ -1,17 +1,17 @@
 import { Metadata } from "next";
 
-import TimeZone from "./components/navigasi/TimeZone";
-import Navbar from "./components/navigasi/Navbar";
-import HomeHero from "./components/homepage/HomeHero";
-import Footer from "./components/navigasi/Footer";
-import PageLocation from "./components/navigasi/PageLocation";
+import TimeZone from "../components/navigasi/TimeZone";
+import Navbar from "../components/navigasi/Navbar";
+import HomeHero from "../components/homepage/HomeHero";
+import Footer from "../components/navigasi/Footer";
+import PageLocation from "../components/navigasi/PageLocation";
 
 export const metadata: Metadata = {
   title: "REVORIONS",
   description: "Liven up every moment with a revolutionary fashion twist.",
 };
 
-export default function Home() {
+export default function Home({}: { params: { lang: string } }) {
   return (
     <main className="min-h-screen bg-black">
       <section className="relative">
@@ -43,7 +43,7 @@ export default function Home() {
       </section>
 
       <section>
-        <PageLocation place="HOME" classText="text-white" bgColor="bg-black" />
+        <PageLocation place="H01-1" classText="text-white" bgColor="bg-black" />
       </section>
     </main>
   );
