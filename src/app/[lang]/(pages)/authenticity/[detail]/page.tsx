@@ -50,16 +50,14 @@ const Page: React.FC<DetailItemProps> = ({ params }) => {
         </section>
       </section>
 
-      <section>
+      <section className="w-full bg-black">
         <div>
           <Footer bgColor="bg-black" textColor="text-white" />
         </div>
-      </section>
 
-      <section>
         <div>
           <PageLocation
-            place="AUTHENTICITY"
+            place="H01-1"
             classText="text-white"
             bgColor="bg-black"
           />

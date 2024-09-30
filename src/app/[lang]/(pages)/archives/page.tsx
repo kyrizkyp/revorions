@@ -56,18 +56,16 @@ const Page = () => {
         </section>
       </section>
 
-      <section>
+      <section className="w-full bg-black">
         <div>
           <Footer bgColor="bg-black" textColor="text-white" />
         </div>
-      </section>
 
-      <section>
         <div>
           <PageLocation
-            place="ARCHIVES"
-            classText="text-black"
-            bgColor="bg-white"
+            place="H01-1"
+            classText="text-white"
+            bgColor="bg-black"
           />
         </div>
       </section>

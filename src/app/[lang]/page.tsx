@@ -39,14 +39,18 @@ export default function Home({}: { params: { lang: string } }) {
         </div>
       </section>
 
-      <section>
+      <section className="w-full bg-black">
         <div>
-          <Footer bgColor="bg-white" textColor="text-black" />
+          <Footer bgColor="bg-black" textColor="text-white" />
         </div>
-      </section>
 
-      <section>
-        <PageLocation place="H01-1" classText="text-white" bgColor="bg-black" />
+        <div>
+          <PageLocation
+            place="H01-1"
+            classText="text-white"
+            bgColor="bg-black"
+          />
+        </div>
       </section>
     </main>
   );
