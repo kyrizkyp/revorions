@@ -74,7 +74,7 @@ const SearchValidID = () => {
           <input
             type="text"
             name="authenticity"
-            placeholder="PLEASE ENTER ID"
+            placeholder={t.authenticity.labelId}
             value={inputValue}
             onChange={handleInputChange}
             onKeyDown={handleKeyDown}
@@ -107,7 +107,7 @@ const SearchValidID = () => {
 
       <div className="pt-4">
         <img
-          src="https://fastly.picsum.photos/id/894/800/400.jpg?hmac=WwXq08kJHbrCjuZcjFyLCXViBRm-7gedR44Hk1HyykA"
+          src="https://fastly.picsum.photos/id/444/800/300.jpg?hmac=ZFafVgzhY57bNf4i0mzmChn7mfL_b8I_tk7RmpI1Qd8"
           alt="ID"
           className="w-full h-full object-cover"
         />

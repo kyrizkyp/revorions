@@ -40,6 +40,7 @@
     "desc1": "We understand how important the authenticity and exclusivity of each of our products is. Therefore, each of our clothing items comes with a unique serial number ensuring that you are getting a genuine product from RV. This serial number is not just identification, but also a guarantee that you are getting the quality and design that we have carefully designed.",
 
     "idDesc": "Enter the 12 digit RV code number in the label tag column below without using the hyphen '-'.",
+    "labelId": "PLEASE ENTER ID",
 
     "message": "Please enter a 12-digit number.",
     "check": "CHECK AUTHENTICITY",
