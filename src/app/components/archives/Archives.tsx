@@ -1,9 +1,7 @@
 "use client";
 
-import { IconChevronLeft } from "@tabler/icons-react";
-import { useDictionary } from "../DictionaryProvider";
-import Link from "next/link";
 import React from "react";
+import { useDictionary } from "../DictionaryProvider";
 
 const Archives = () => {
   const t = useDictionary();
