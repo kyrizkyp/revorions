@@ -35,7 +35,7 @@ const Notification = () => {
   }, [isModalOpen]);
 
   return (
-    <>
+    <div className="flex items-center justify-center">
       <button
         onClick={handleOpenModal}
         className={`transform ${
@@ -43,9 +43,9 @@ const Notification = () => {
         } transition duration-500`}
       >
         {isModalOpen ? (
-          <IconBell className="stroke-[2.2]" />
+          <IconBell className="stroke-[2.2] w-6 h-6" />
         ) : (
-          <IconBellRinging className="stroke-[2.2]" />
+          <IconBellRinging className="stroke-[2.2] w-6 h-6" />
         )}
       </button>
 
@@ -74,7 +74,7 @@ const Notification = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

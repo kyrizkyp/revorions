@@ -11,6 +11,9 @@ interface NavbarProps {
   picture: string;
   pictureDropdown: string;
   pictureScroll: string;
+  colorsLang: string;
+  colorsLangDropdown: string;
+  colorsLangScroll: string;
   colorsNavbar: string;
   colorsText: string;
   colorsTextDropdown: string;
@@ -21,6 +24,9 @@ const Navbar: React.FC<NavbarProps> = ({
   picture,
   pictureDropdown,
   pictureScroll,
+  colorsLang,
+  colorsLangDropdown,
+  colorsLangScroll,
   colorsNavbar,
   colorsText,
   colorsTextDropdown,
@@ -29,6 +35,7 @@ const Navbar: React.FC<NavbarProps> = ({
   const [openBrand, setBrand] = useState(false);
   const [openItems, setItems] = useState(false);
   const [openMenu, setMenu] = useState(false);
+  const [dropdownLang, setDropdownLang] = useState(false);
   const [animationMenu, setAnimationMenu] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -110,10 +117,23 @@ const Navbar: React.FC<NavbarProps> = ({
     };
   }, []);
 
+  const openDropdownLang = () => {
+    setDropdownLang(!dropdownLang);
+    setBrand(false);
+    setItems(false);
+    setMenu(false);
+    setAnimationMenu(false);
+  };
+
+  const closeDropdownLang = () => {
+    setDropdownLang(false);
+  };
+
   const openModalNotif = () => {
     closeMenuClick();
     closeBrandMenu();
     closeItemsMenu();
+    closeDropdownLang();
   };
 
   const openMenuClick = () => {
@@ -121,6 +141,7 @@ const Navbar: React.FC<NavbarProps> = ({
     setAnimationMenu(!animationMenu);
     setBrand(false);
     setItems(false);
+    setDropdownLang(false);
   };
 
   const openBrandMenu = () => {
@@ -128,6 +149,7 @@ const Navbar: React.FC<NavbarProps> = ({
     setMenu(false);
     setAnimationMenu(false);
     setItems(false);
+    setDropdownLang(false);
   };
 
   const openItemsMenu = () => {
@@ -135,6 +157,7 @@ const Navbar: React.FC<NavbarProps> = ({
     setMenu(false);
     setAnimationMenu(false);
     setBrand(false);
+    setDropdownLang(false);
   };
 
   const closeMenuClick = () => {
@@ -154,19 +177,24 @@ const Navbar: React.FC<NavbarProps> = ({
     const resizeCloseDropdown = () => {
       if (
         (window.innerWidth <= 768 || window.innerWidth > 768) &&
-        (openMenu || openBrand || openItems)
+        (openMenu || openBrand || openItems || dropdownLang)
       ) {
         closeMenuClick();
         closeBrandMenu();
         closeItemsMenu();
+        closeDropdownLang();
       }
     };
 
     const clickEsc = (click: { keyCode: number }) => {
-      if (click.keyCode === 27 && (openMenu || openBrand || openItems)) {
+      if (
+        click.keyCode === 27 &&
+        (openMenu || openBrand || openItems || dropdownLang)
+      ) {
         closeMenuClick();
         closeBrandMenu();
         closeItemsMenu();
+        closeDropdownLang();
       }
     };
 
@@ -177,7 +205,7 @@ const Navbar: React.FC<NavbarProps> = ({
       window.removeEventListener("resize", resizeCloseDropdown);
       document.removeEventListener("keydown", clickEsc);
     };
-  }, [openMenu, openBrand, openItems]);
+  }, [openMenu, openBrand, openItems, dropdownLang]);
 
   const dropdownMenu = `fixed flex flex-col bg-white items-center justify-center top-0 left-0 w-full h-[500px] p-2 transform transition-transform duration-700 ease-in-out -z-10 ${
     openMenu ? "translate-y-0" : "-translate-y-full"
@@ -203,6 +231,7 @@ const Navbar: React.FC<NavbarProps> = ({
             closeMenuClick();
             closeBrandMenu();
             closeItemsMenu();
+            closeDropdownLang();
           }}
           className="absolute top-[6px] md:top-[4px] left-1/2 transform -translate-x-1/2"
         >
@@ -337,9 +366,33 @@ const Navbar: React.FC<NavbarProps> = ({
           </div>
         </div>
 
-        <div className="flex items-start gap-4 justify-center">
-          <div>
-            <BtnLanguage />
+        <div className="flex items-center gap-4 justify-center">
+          <div className="relative flex items-center justify-center">
+            <div
+              className={`relative ${
+                openMenu || openBrand || openItems ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <BtnLanguage
+                isDropdownOpen={dropdownLang}
+                toggleDropdown={openDropdownLang}
+                colorsLang={`${
+                  isScrolledPast ? colorsLangScroll : colorsLangDropdown
+                }`}
+              />
+            </div>
+
+            <div
+              className={`absolute ${
+                openMenu || openBrand || openItems ? "opacity-0" : "opacity-100"
+              }`}
+            >
+              <BtnLanguage
+                isDropdownOpen={dropdownLang}
+                toggleDropdown={openDropdownLang}
+                colorsLang={`${isScrolledPast ? colorsLangScroll : colorsLang}`}
+              />
+            </div>
           </div>
 
           <div className="relative flex items-center justify-center">
@@ -381,6 +434,15 @@ const Navbar: React.FC<NavbarProps> = ({
             closeBrandMenu();
             closeItemsMenu();
             closeMenuClick();
+          }}
+        />
+      )}
+
+      {dropdownLang && (
+        <div
+          className="fixed inset-0 -z-50"
+          onClick={() => {
+            closeDropdownLang();
           }}
         />
       )}

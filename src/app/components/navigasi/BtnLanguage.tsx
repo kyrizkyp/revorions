@@ -2,12 +2,21 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 
-const BtnLanguage = () => {
+interface BtnLanguageProps {
+  isDropdownOpen: boolean;
+  toggleDropdown: () => void;
+  colorsLang: string;
+}
+
+const BtnLanguage: React.FC<BtnLanguageProps> = ({
+  isDropdownOpen,
+  toggleDropdown,
+  colorsLang,
+}) => {
   const languages = ["en", "id"];
   const router = useRouter();
 
   const [currentLang, setCurrentLang] = useState<string | null>(null);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -36,38 +45,40 @@ const BtnLanguage = () => {
   const changeLanguage = (newLocale: string) => {
     localStorage.setItem("i18nlang", newLocale);
     setCurrentLang(newLocale);
-    setDropdownOpen(false);
+    toggleDropdown();
   };
 
   return (
-    <div className="relative">
-      <button onClick={() => setDropdownOpen(!dropdownOpen)}>
+    <div className="relative flex items-center justify-center">
+      <button onClick={toggleDropdown}>
         {currentLang && (
           <Image
             src={`/images/lang/${currentLang}.png`}
             alt={`${currentLang} flag`}
-            width={25}
-            height={25}
+            width={24}
+            height={24}
+            className={`border-2 ${colorsLang} rounded-[4px]`}
           />
         )}
       </button>
 
       <div
-        className={`absolute w-10 bg-gray-200 rounded shadow-lg overflow-hidden transition-all duration-500 ease-in-out ${
-          dropdownOpen ? "max-h-[80px] bg-opacity-100" : "max-h-0 bg-opacity-0"
+        className={`absolute w-10 top-full my-2 bg-white rounded shadow-lg overflow-hidden transition-all duration-500 ease-in-out ${
+          isDropdownOpen ? "max-h-[80px]" : "max-h-0"
         }`}
       >
         {languages.map((lang) => (
           <button
             key={lang}
             onClick={() => changeLanguage(lang)}
-            className="p-2 cursor-pointer hover:bg-gray-200"
+            className="p-2 hover:bg-gray-200"
           >
             <Image
               src={`/images/lang/${lang}.png`}
               alt="lang"
               width={30}
               height={30}
+              className="border-2 border-black rounded-[4px]"
             />
           </button>
         ))}
