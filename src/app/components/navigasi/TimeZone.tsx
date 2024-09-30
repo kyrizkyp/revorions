@@ -73,7 +73,7 @@ const TimeZone = () => {
 
   return (
     <div className="w-full bg-black">
-      <div className="max-w-sm lg:max-w-xl mx-auto flex items-center justify-between p-2">
+      <div className="max-w-sm md:max-w-xl mx-auto flex items-center justify-between p-2">
         <button className="text-white" onClick={handlePrevClick}>
           <IconChevronLeft className="w-4 h-4" />
         </button>

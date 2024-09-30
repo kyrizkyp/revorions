@@ -34,9 +34,9 @@ const Footer: React.FC<FooterProps> = ({ bgColor, textColor }) => {
 
   return (
     <div
-      className={`h-fullw-full p-4 flex flex-col md:flex-row justify-between ${bgColor}`}
+      className={`h-full w-full p-4 flex flex-col md:flex-row items-center md:items-start justify-between ${bgColor}`}
     >
-      <div className="w-full md:w-1/2">
+      <div className="w-full md:max-w-4xl mx-auto">
         <div
           className={`py-2 w-full cursor-pointer ${textColor}`}
           onClick={() => toggleSection("contact")}
@@ -108,7 +108,7 @@ const Footer: React.FC<FooterProps> = ({ bgColor, textColor }) => {
         </div>
       </div>
 
-      <div className="w-full md:w-1/2">
+      <div className="w-full md:max-w-4xl mx-auto">
         <p className={textColor}>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi id
           voluptas numquam! Lorem ipsum dolor, sit amet consectetur adipisicing

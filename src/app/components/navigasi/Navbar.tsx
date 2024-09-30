@@ -233,7 +233,7 @@ const Navbar: React.FC<NavbarProps> = ({
             closeItemsMenu();
             closeDropdownLang();
           }}
-          className="absolute top-[6px] md:top-[4px] left-1/2 transform -translate-x-1/2"
+          className="absolute top-[6px] md:top-[4px] xl:top-[1.2px] left-1/2 transform -translate-x-1/2"
         >
           <div className="relative w-12 h-12 md:w-16 md:h-16">
             <Image

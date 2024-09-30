@@ -7,9 +7,11 @@ const images = [
   "https://fastly.picsum.photos/id/927/500/600.jpg?hmac=1iYKtgo4c_4MjiuR30GQA8t90N8Ul6ej8Z8Zeb7X6VA",
 
   "https://fastly.picsum.photos/id/642/500/600.jpg?hmac=wr7b4jLam-kuMQTs2XcDkQZrfr0tPi3ZTLrBUMd7iHQ",
+
+  "https://fastly.picsum.photos/id/406/500/600.jpg?hmac=p4dkbARQKB1WYffqsM80LdhqYN_mCAjFf1ssSkg19wk",
 ];
 
-const HistoryGallery: React.FC = () => {
+const HistoryGalleryNote: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
@@ -123,4 +125,4 @@ const HistoryGallery: React.FC = () => {
   );
 };
 
-export default HistoryGallery;
+export default HistoryGalleryNote;
