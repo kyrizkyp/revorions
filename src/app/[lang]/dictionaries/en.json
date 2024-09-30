@@ -18,6 +18,11 @@
     "item4": "SHORTS & TROUSERS"
   },
 
+  "notif": {
+    "title1": "Greetings, from us RV.",
+    "desc1": "Sorry, we do not yet provide a direct purchase feature on our official website. We hope to bring this feature as soon as possible."
+  },
+
   "home": {
     "title1": "REVORIONS",
     "desc1": "Liven up every moment with a revolutionary fashion twist, a collection of clothing designed to combine an active and dynamic lifestyle, and each design embodies the spirit of modernity and boldness.",
@@ -43,13 +48,15 @@
   },
 
   "archives": {
-    "title1": "THE ARCHIVES",
+    "page": "ARCHIVES",
+    "title1": "STORY ARCHIVES",
     "desc1": "Each collection is a story, showcasing evolution and innovation in every design. Inspiration shines behind every detail, depicting a journey of limitless creativity and expression.",
     "btnLoad": "LOAD MORE"
   },
 
   "authenticity": {
-    "title1": "AUTHENTICITY",
+    "page": "AUTHENTICITY",
+    "title1": "ABOUT AUTHENTICITY",
     "desc1": "We understand how important the authenticity and exclusivity of each of our products is. Therefore, each of our clothing items comes with a unique serial number ensuring that you are getting a genuine product from RV. This serial number is not just identification, but also a guarantee that you are getting the quality and design that we have carefully designed.",
 
     "idDesc": "Enter the 12 digit RV code number in the label tag column below without using the hyphen '-'.",

@@ -56,7 +56,7 @@ const Footer: React.FC<FooterProps> = ({ bgColor, textColor }) => {
           >
             <div className="p-4">
               <div className="py-[2px]">
-                <p className="font-mono text-sm">ID 082345678345</p>
+                <p className="font-mono text-sm">ID +62</p>
               </div>
 
               <div className="py-[2px]">
@@ -109,12 +109,7 @@ const Footer: React.FC<FooterProps> = ({ bgColor, textColor }) => {
       </div>
 
       <div className="w-full md:max-w-4xl mx-auto">
-        <p className={textColor}>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi id
-          voluptas numquam! Lorem ipsum dolor, sit amet consectetur adipisicing
-          elit. Odit facilis officia, neque aperiam incidunt cumque culpa
-          ducimus atque. Aspernatur, necessitatibus?
-        </p>
+        <p className={textColor}></p>
       </div>
     </div>
   );

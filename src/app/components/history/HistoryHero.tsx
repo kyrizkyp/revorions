@@ -24,7 +24,7 @@ const HistoryHero = () => {
         <div className="absolute w-full px-4 flex flex-col items-center justify-center">
           <div className="w-full flex items-center justify-between py-10 md:py-20">
             <div className="text-left text-white">
-              <h1 className="font-mono text-xs">{t.history.page}</h1>
+              <h1 className="font-mono text-xs md:text-sm">{t.history.page}</h1>
             </div>
 
             <div className="text-white max-w-[160px] md:max-w-md">

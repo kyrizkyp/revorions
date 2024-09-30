@@ -16,7 +16,12 @@
      "item2": "KAOS POLOS & KAOS",
      "item3": "HOODIE & JAKET",
      "item4": "CELANA PENDEK & PANJANG"
-   },
+    },
+
+    "notif": {
+     "title1": "Salam, dari kami RV.",
+     "desc1": "Mohon maaf, kami belum menyediakan fitur pembelian langsung di website resmi kami. Kami berharap dapat menghadirkan fitur ini sesegera mungkin."
+    },
 
     "home": {
       "title1": "REVORIONS",
@@ -40,16 +45,18 @@
      "title3": "REVORIONS SENI",
      "desc3": "Sejak tahun 2024, REVORIONS aktif dalam berbagai kolaborasi seni, khususnya seni mural yang mencerminkan semangat keberanian dan ekspresi kreatif. Melalui karya visual yang menggugah, baik di ruang publik maupun melalui desain fashion.",
      "desc4": "Kami menganggap seni mural sebagai bentuk kreativitas yang mencerminkan pesan mendalam dalam setiap detailnya."
-  },
+    },
 
     "archives": {
-    "title1": "ARSIP",
+    "page": "ARSIP",
+    "title1": "ARSIP CERITA",
     "desc1": "Setiap koleksi adalah sebuah cerita, menampilkan evolusi dan inovasi dalam setiap desain. Inspirasi terpancar di balik setiap detail, menggambarkan perjalanan kreativitas dan ekspresi tanpa batas.",
     "btnLoad": "MUAT LEBIH BANYAK"
     },
 
     "authenticity": {
-    "title1": "KEASLIAN",
+    "page": "KEASLIAN",
+    "title1": "TENTANG KEASLIAN",
     "desc1": "Kami memahami betapa pentingnya keaslian dan eksklusivitas setiap produk kami. Oleh karena itu, setiap item pakaian kami dilengkapi dengan nomor seri unik yang memastikan bahwa Anda mendapatkan produk asli dari RV. Nomor seri ini bukan sekedar tanda pengenal, tetapi juga jaminan bahwa Anda mendapatkan kualitas dan desain yang telah kami rancang dengan cermat.",
 
     "idDesc": "Masukkan 12 digit angka kode RV, pada kolom tag label di bawah tanpa menggunakan tanda hubung '-'.",

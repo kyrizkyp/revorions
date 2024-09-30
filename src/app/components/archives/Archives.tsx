@@ -10,13 +10,9 @@ const Archives = () => {
   return (
     <div className="w-full px-4">
       <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center md:justify-between">
-        <Link
-          href="/"
-          className="flex items-center font-mono font-bold self-start lg:self-auto py-8 lg:py-0"
-        >
-          <IconChevronLeft className="w-4 h-4" />
-          BACK
-        </Link>
+        <div className="text-left">
+          <h1 className="font-mono text-xs md:text-sm">{t.archives.page}</h1>
+        </div>
 
         <div className="flex flex-col items-center justify-center">
           <div className="p-2 text-center">
@@ -29,7 +25,7 @@ const Archives = () => {
         </div>
 
         <div className="self-end lg:self-auto px-0 lg:px-2 pt-8 lg:pt-0">
-          <p className="font-mono font-bold text-sm">&lsquo;RV24&lsquo;-25</p>
+          <p className="font-mono text-xs md:text-sm">&lsquo;RV24&lsquo;-25</p>
         </div>
       </div>
     </div>

@@ -2,11 +2,14 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { IconBell, IconBellRinging } from "@tabler/icons-react";
+import { useDictionary } from "../DictionaryProvider";
 
 const Notification = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [animasiPutar, mengaturAnimasiPutar] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
+
+  const t = useDictionary();
 
   const klikLuar = (klik: React.MouseEvent<HTMLDivElement>) => {
     if (modalRef.current === klik.target) {
@@ -61,15 +64,13 @@ const Notification = () => {
         <div className="flex flex-col items-center justify-center bg-white text-black p-2 rounded shadow-lg">
           <div className="p-4">
             <h1 className="text-center font-mono font-bold">
-              Greetings, from us RV.
+              {t.notif.title1}
             </h1>
           </div>
 
           <div className="max-w-xs md:max-w-sm lg:max-w-xl p-4">
             <p className="text-center font-mono text-xs md:text-sm">
-              Sorry, we do not yet provide a direct purchase feature on our
-              official website. We hope to bring this feature as soon as
-              possible.
+              {t.notif.desc1}
             </p>
           </div>
         </div>

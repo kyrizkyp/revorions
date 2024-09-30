@@ -117,7 +117,7 @@ const HomeHero = () => {
                   </div>
 
                   <div className="p-2 text-right text-white">
-                    <p className="font-mono font-bold">{text.order}</p>
+                    <p className="font-mono">{text.order}</p>
                   </div>
                 </div>
               ))}
@@ -138,7 +138,7 @@ const HomeHero = () => {
         </div>
 
         <div className="text-white absolute -top-4 xl:top-8 left-6 2xl:left-8">
-          <p className="font-mono font-bold text-sm">&lsquo;RV24&lsquo;-25</p>
+          <p className="font-mono text-sm">&lsquo;RV24&lsquo;-25</p>
         </div>
       </div>
     </div>
