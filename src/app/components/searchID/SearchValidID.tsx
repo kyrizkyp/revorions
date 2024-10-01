@@ -1,6 +1,6 @@
 "use client";
 
-import { IconLoader, IconSearch } from "@tabler/icons-react";
+import { IconLoader } from "@tabler/icons-react";
 import React, { useState } from "react";
 import IDcode from "../../DataID/IDcode.json";
 import NotFoundID from "../../DataID/NotFoundID";
