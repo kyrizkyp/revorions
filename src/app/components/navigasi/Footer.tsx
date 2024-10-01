@@ -51,15 +51,15 @@ const Footer: React.FC<FooterProps> = ({ bgColor, textColor }) => {
 
           <div
             className={`overflow-hidden transition-all duration-500 ease-in-out ${
-              openSection === "contact" ? "max-h-[74px]" : "max-h-0"
+              openSection === "contact" ? "max-h-[80px]" : "max-h-0"
             }`}
           >
             <div className="p-4">
-              <div className="py-[2px]">
+              <div className="py-[4px]">
                 <p className="font-mono text-sm">ID +62</p>
               </div>
 
-              <div className="py-[2px]">
+              <div className="py-[4px]">
                 <a href="/email" target="_blank" className="font-mono text-sm">
                   EMAIL US
                 </a>
@@ -82,12 +82,12 @@ const Footer: React.FC<FooterProps> = ({ bgColor, textColor }) => {
 
           <div
             className={`overflow-hidden transition-all duration-500 ease-in-out ${
-              openSection === "followUs" ? "max-h-[86px]" : "max-h-0"
+              openSection === "followUs" ? "max-h-[100px]" : "max-h-0"
             }`}
           >
             <div className="p-2">
               {socialLinks.map((link, index) => (
-                <div key={index} className="py-[2px]">
+                <div key={index} className="py-[4px]">
                   <a
                     href={link.url}
                     target="_blank"

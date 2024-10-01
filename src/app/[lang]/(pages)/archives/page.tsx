@@ -39,13 +39,13 @@ const Page = () => {
       </section>
 
       <section className="flex-grow">
-        <section className="pt-12 md:pt-14 lg:pt-28">
+        <section className="pt-28 pb-10">
           <div>
             <Archives />
           </div>
         </section>
 
-        <section className="py-4">
+        <section className="py-10">
           <div className="block md:hidden">
             <ArchivesMobile />
           </div>

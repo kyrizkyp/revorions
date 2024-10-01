@@ -59,8 +59,9 @@
     "title1": "ABOUT AUTHENTICITY",
     "desc1": "We understand how important the authenticity and exclusivity of each of our products is. Therefore, each of our clothing items comes with a unique serial number ensuring that you are getting a genuine product from RV. This serial number is not just identification, but also a guarantee that you are getting the quality and design that we have carefully designed.",
 
-    "idDesc": "Enter the 12 digit RV code number in the label tag column below without using the hyphen '-'.",
+    "idDesc": "To check the authenticity of our products, please check the ID series on the item tag label that you own. Enter the 12-digit RV code, in the column below without using the hyphen '-', click 'SEND' wait a few moments then click 'CHECK AUTHENTICITY'. You will be directed to a page detailing the authenticity of the item you own.",
     "labelId": "PLEASE ENTER ID",
+    "submit": "SEND",
 
     "message": "Please enter a 12-digit number.",
     "check": "CHECK AUTHENTICITY",
@@ -68,5 +69,9 @@
     "title2": "AUTHENTICITY PROTECTION",
     "desc2": "We are committed to maintaining the safety and authenticity of every product we offer. Every item you purchase through our system has gone through a series of rigorous verification processes designed to protect you from counterfeit products. This verification system is an integral part of our efforts to ensure that every product you receive is 100% authentic, made to the highest quality standards, and meets your expectations.",
     "desc3": "Your trust is the most valuable thing for us. Therefore, we continue to innovate and improve our systems to provide the best protection against counterfeit goods. With our products, you not only get high quality goods, but also the peace of mind that comes with knowing that you have an authentic product, made with the utmost dedication and craftsmanship."
+  },
+
+  "pageLocation": {
+    "year": "'YR'"
   }
 }

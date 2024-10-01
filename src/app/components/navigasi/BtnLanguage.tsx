@@ -63,7 +63,7 @@ const BtnLanguage: React.FC<BtnLanguageProps> = ({
       </button>
 
       <div
-        className={`absolute w-10 top-full my-2 bg-white rounded shadow-lg overflow-hidden transition-all duration-500 ease-in-out ${
+        className={`absolute w-10 top-full my-2 bg-white overflow-hidden transition-all duration-500 ease-in-out ${
           isDropdownOpen ? "max-h-[80px]" : "max-h-0"
         }`}
       >

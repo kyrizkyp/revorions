@@ -59,16 +59,14 @@ const SearchValidID = () => {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="max-w-xl">
+      <div className="max-w-xl md:max-w-2xl">
         <p className="font-mono text-sm text-center">{t.authenticity.idDesc}</p>
       </div>
 
       <div className="flex flex-col items-center justify-center py-4">
         <div className="flex items-center justify-center relative ml-8">
-          <div className="p-[7px] bg-black absolute -left-[34px]">
-            <h1 className="font-mono font-bold text-lg text-white text-center">
-              RV
-            </h1>
+          <div className="p-[6px] border-t border-b border-l border-black absolute -left-[34px]">
+            <h1 className="font-mono font-bold text-lg text-center">RV</h1>
           </div>
 
           <input
@@ -78,11 +76,14 @@ const SearchValidID = () => {
             value={inputValue}
             onChange={handleInputChange}
             onKeyDown={handleKeyDown}
-            className="p-2 w-56 md:w-96 border font-mono font-bold border-black focus:outline-black"
+            className="p-2 w-56 md:w-96 border-t border-b font-mono font-bold border-black focus:outline-none"
           />
 
-          <button className="p-2 absolute right-0" onClick={handleSearch}>
-            <IconSearch className="w-5 h-5" />
+          <button
+            className="p-2 absolute font-mono font-bold right-0 bg-black text-white"
+            onClick={handleSearch}
+          >
+            {t.authenticity.submit}
           </button>
         </div>
 

@@ -39,7 +39,7 @@ const page = () => {
       </section>
 
       <section className="flex-grow">
-        <section className="pt-12 md:pt-14 lg:pt-28">
+        <section className="pt-28 pb-10">
           <div>
             <Authenticity />
           </div>

@@ -8,7 +8,7 @@ const Archives = () => {
   return (
     <div className="w-full px-4">
       <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center md:justify-between">
-        <div className="text-left">
+        <div className="text-left self-start pb-8 lg:pb-0">
           <h1 className="font-mono text-xs md:text-sm">{t.archives.page}</h1>
         </div>
 

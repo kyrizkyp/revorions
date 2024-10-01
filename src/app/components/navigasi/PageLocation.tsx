@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { useDictionary } from "../DictionaryProvider";
 
 interface PageLocationProps {
   place: string;
@@ -12,12 +15,14 @@ const PageLocation: React.FC<PageLocationProps> = ({
   bgColor,
 }) => {
   const currentYear = new Date().getFullYear();
+
+  const t = useDictionary();
   return (
     <div className={`w-full ${bgColor}`}>
       <div className="flex items-start justify-between p-4">
         <div className={classText}>
           <p className="text-left font-mono text-xs md:text-sm">
-            &copy;&lsquo;2024&lsquo;-{currentYear}
+            &copy;{t.pageLocation.year}-{currentYear}
           </p>
         </div>
 

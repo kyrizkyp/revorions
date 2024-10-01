@@ -8,13 +8,13 @@ const Authenticity = () => {
   return (
     <div className="w-full px-4">
       <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center md:justify-between">
-        <div className="text-left">
+        <div className="text-left self-start pb-8 lg:pb-0">
           <h1 className="font-mono text-xs md:text-sm">
             {t.authenticity.page}
           </h1>
         </div>
 
-        <div className="flex items-start gap-10 xl:gap-32">
+        <div className="flex flex-col md:flex-row items-start gap-6 xl:gap-32">
           <div className="text-left">
             <h1 className="font-mono font-bold">{t.authenticity.title1}</h1>
           </div>

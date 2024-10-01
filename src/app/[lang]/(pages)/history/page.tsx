@@ -39,32 +39,32 @@ const page = () => {
         </div>
       </section>
 
-      <section>
+      <section className="pb-10">
         <div>
           <HistoryHero />
         </div>
       </section>
 
       <section className="flex-grow bg-white">
-        <section className="pt-16">
+        <section className="py-10">
           <div>
             <HistoryNote />
           </div>
         </section>
 
-        <section className="py-20">
+        <section className="py-10">
           <div>
             <HistoryGalleryNote />
           </div>
         </section>
 
-        <section className="pt-16">
+        <section className="py-10">
           <div>
             <HistoryArt />
           </div>
         </section>
 
-        <section className="py-20">
+        <section className="py-10">
           <div>
             <HistoryGalleryArt />
           </div>
