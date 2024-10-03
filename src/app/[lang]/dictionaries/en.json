@@ -5,17 +5,19 @@
   },
 
   "navigasi": {
-    "brand": "BRAND",
+    "brand": "OUR BRAND",
     "lifestyle": "LIFESTYLE",
     "title1": "WORLD OF RV",
     "title2": "CATEGORY 'SOON'",
-    "brand1": "RV HISTORY NOTES",
-    "brand2": "THE ARCHIVES",
-    "brand3": "AUTHENTICITY ITEM",
-    "item1": "ALL OTHER ITEMS",
-    "item2": "PLAIN & T-SHIRTS",
-    "item3": "HOODIE & JACKET",
-    "item4": "SHORTS & TROUSERS"
+    "brand1": "OUR ACTIVITIES",
+    "brand2": "JOURNEY OF HISTORY",
+    "brand3": "THE ARCHIVES",
+    "brand4": "AUTHENTICITY ITEM",
+    "item1": "NEWEST ITEMS",
+    "item2": "ALL OTHER ITEMS",
+    "item3": "PLAIN & T-SHIRTS",
+    "item4": "HOODIE & JACKET",
+    "item5": "SHORTS & TROUSERS"
   },
 
   "notif": {

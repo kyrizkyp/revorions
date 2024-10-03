@@ -68,14 +68,18 @@ const Navbar: React.FC<NavbarProps> = ({
   const menuBrand = [
     {
       title: t.navigasi.brand1,
-      page: "/history",
+      page: "/activity",
     },
     {
       title: t.navigasi.brand2,
-      page: "/archives",
+      page: "/history",
     },
     {
       title: t.navigasi.brand3,
+      page: "/archives",
+    },
+    {
+      title: t.navigasi.brand4,
       page: "/authenticity",
     },
   ];
@@ -207,15 +211,15 @@ const Navbar: React.FC<NavbarProps> = ({
     };
   }, [openMenu, openBrand, openItems, dropdownLang]);
 
-  const dropdownMenu = `fixed flex flex-col bg-white items-center justify-center top-0 left-0 w-full h-[500px] p-2 transform transition-transform duration-700 ease-in-out -z-10 ${
+  const dropdownMenu = `fixed bg-white top-0 left-0 w-full h-[560px] p-2 transform transition-transform duration-700 ease-in-out -z-10 ${
     openMenu ? "translate-y-0" : "-translate-y-full"
   }`;
 
-  const dropdownBrand = `fixed flex flex-col bg-white items-center justify-center top-0 left-0 w-full h-96 xl:h-[500px] p-4 transform transition-transform duration-700 ease-in-out -z-10 ${
+  const dropdownBrand = `fixed bg-white top-0 left-0 w-full h-[600px] p-4 transform transition-transform duration-700 ease-in-out -z-10 ${
     openBrand ? "translate-y-0" : "-translate-y-full"
   }`;
 
-  const dropdownItems = `fixed flex flex-col bg-white items-center justify-center top-0 left-0 w-full h-96 xl:h-[500px] p-4 transform transition-transform duration-700 ease-in-out -z-10 ${
+  const dropdownItems = `fixed bg-white top-0 left-0 w-full h-[600px] p-4 transform transition-transform duration-700 ease-in-out -z-10 ${
     openItems ? "translate-y-0" : "-translate-y-full"
   }`;
   return (
@@ -448,21 +452,21 @@ const Navbar: React.FC<NavbarProps> = ({
       )}
 
       <div className={dropdownMenu}>
-        <div className="w-full mt-8">
-          <div className="w-full">
-            <div className="flex flex-col items-start">
+        <div className="max-w-4xl my-20">
+          <div className="flex items-start justify-between">
+            <div className="flex flex-col items-start p-2">
               <div className="pb-4">
                 <div className="p-[2px]">
                   <p className="font-mono">{t.navigasi.title1}</p>
                 </div>
 
-                <div className="p-[12px] flex flex-col items-start justify-center">
+                <div className="p-[10px] flex flex-col items-start justify-center">
                   {menuBrand.map((menu, urutan) => (
                     <Link
                       key={urutan}
                       href={menu.page}
-                      onClick={closeBrandMenu}
-                      className="font-mono text-xs py-[6px]"
+                      onClick={closeMenuClick}
+                      className="font-mono text-xs py-[8px]"
                     >
                       {menu.title}
                     </Link>
@@ -475,16 +479,48 @@ const Navbar: React.FC<NavbarProps> = ({
                   <p className="font-mono">{t.navigasi.title2}</p>
                 </div>
 
-                <div className="p-[12px] flex flex-col items-start justify-center">
+                <div className="p-[10px] flex flex-col items-start justify-center">
                   {menuItems.map((menu, urutan) => (
                     <p
                       key={urutan}
-                      onClick={closeBrandMenu}
-                      className="font-mono text-xs py-[6px] text-gray-400"
+                      onClick={closeMenuClick}
+                      className="font-mono text-xs py-[8px] text-gray-400"
                     >
                       {menu.title}
                     </p>
                   ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center p-2">
+              <Link href="/activity" onClick={closeMenuClick} className="pb-4">
+                <div className="p-[2px]">
+                  <img
+                    src="https://fastly.picsum.photos/id/819/140/160.jpg?hmac=F6ug9zFi_Im3s2pxHdbwbxiqHoXNcm7G1I6YLKGGcW8"
+                    alt=""
+                  />
+                </div>
+
+                <div className="p-[2px]">
+                  <p className="font-mono text-xs">
+                    &apos;{t.navigasi.brand1}&apos;
+                  </p>
+                </div>
+              </Link>
+
+              <div onClick={closeMenuClick} className="pt-4">
+                <div className="p-[2px]">
+                  <img
+                    src="https://fastly.picsum.photos/id/819/140/160.jpg?hmac=F6ug9zFi_Im3s2pxHdbwbxiqHoXNcm7G1I6YLKGGcW8"
+                    alt=""
+                  />
+                </div>
+
+                <div className="p-[2px]">
+                  <p className="font-mono text-xs text-gray-400">
+                    &apos;{t.navigasi.item1}&apos;
+                  </p>
                 </div>
               </div>
             </div>
@@ -493,45 +529,113 @@ const Navbar: React.FC<NavbarProps> = ({
       </div>
 
       <div className={dropdownBrand}>
-        <div className="w-full px-4 mt-8">
-          <div className="w-full flex flex-col items-start">
-            <div className="px-[2px] py-4 font-mono">
-              <p className="text-[18px]">{t.navigasi.title1}</p>
+        <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto my-24">
+          <div className="flex items-start justify-between">
+            <div className="flex flex-col items-start p-2">
+              <div className="px-[2px] py-4 font-mono">
+                <p className="text-[18px]">{t.navigasi.title1}</p>
+              </div>
+
+              <div className="p-4 flex flex-col items-start justify-center">
+                {menuBrand.map((menu, urutan) => (
+                  <Link
+                    key={urutan}
+                    href={menu.page}
+                    onClick={closeBrandMenu}
+                    className="py-2 hover:font-bold"
+                  >
+                    <p className="font-mono text-sm">{menu.title}</p>
+                  </Link>
+                ))}
+              </div>
             </div>
 
-            <div className="p-4 flex flex-col items-start justify-center">
-              {menuBrand.map((menu, urutan) => (
-                <Link
-                  key={urutan}
-                  href={menu.page}
-                  onClick={closeBrandMenu}
-                  className="py-2 hover:font-bold"
-                >
-                  <p className="font-mono text-sm">{menu.title}</p>
-                </Link>
-              ))}
+            <div className="flex items-center">
+              <Link href="/activity" onClick={closeBrandMenu}>
+                <div className="p-2">
+                  <img
+                    src="https://fastly.picsum.photos/id/923/300/400.jpg?hmac=fM1dy9ym9P14M8ZLfT2sgebgqyrbZJ6vvpzSffUtSpg"
+                    alt=""
+                  />
+                </div>
+
+                <div className="p-2">
+                  <p className="font-mono text-sm">
+                    &apos;{t.navigasi.brand1}&apos;
+                  </p>
+                </div>
+              </Link>
+
+              <Link href="/history" onClick={closeBrandMenu}>
+                <div className="p-2">
+                  <img
+                    src="https://fastly.picsum.photos/id/290/300/400.jpg?hmac=q6eHDRskojwMlG0xiV7Qd9aHK8PIPURBzNRXayIWNfM"
+                    alt=""
+                  />
+                </div>
+
+                <div className="p-2">
+                  <p className="font-mono text-sm">
+                    &apos;{t.navigasi.brand2}&apos;
+                  </p>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
       </div>
 
       <div className={dropdownItems}>
-        <div className="w-full px-4 mt-8">
-          <div className="w-full flex flex-col items-start">
-            <div className="p-[2px] font-mono">
-              <p className="text-[18px]">{t.navigasi.title2}</p>
+        <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto my-24">
+          <div className="flex items-start justify-between">
+            <div className="flex flex-col items-start p-2">
+              <div className="p-[2px] font-mono">
+                <p className="text-[18px]">{t.navigasi.title2}</p>
+              </div>
+
+              <div className="p-4 flex flex-col items-start justify-center">
+                {menuItems.map((menu, urutan) => (
+                  <p
+                    key={urutan}
+                    onClick={closeBrandMenu}
+                    className="font-mono text-sm py-2 text-gray-400"
+                  >
+                    {menu.title}
+                  </p>
+                ))}
+              </div>
             </div>
 
-            <div className="p-4 flex flex-col items-start justify-center">
-              {menuItems.map((menu, urutan) => (
-                <p
-                  key={urutan}
-                  onClick={closeBrandMenu}
-                  className="font-mono text-sm py-2 text-gray-400"
-                >
-                  {menu.title}
-                </p>
-              ))}
+            <div className="flex items-center">
+              <div onClick={closeItemsMenu}>
+                <div className="p-2">
+                  <img
+                    src="https://fastly.picsum.photos/id/923/300/400.jpg?hmac=fM1dy9ym9P14M8ZLfT2sgebgqyrbZJ6vvpzSffUtSpg"
+                    alt=""
+                  />
+                </div>
+
+                <div className="p-2">
+                  <p className="font-mono text-sm text-gray-400">
+                    &apos;{t.navigasi.item1}&apos;
+                  </p>
+                </div>
+              </div>
+
+              <div onClick={closeBrandMenu}>
+                <div className="p-2">
+                  <img
+                    src="https://fastly.picsum.photos/id/290/300/400.jpg?hmac=q6eHDRskojwMlG0xiV7Qd9aHK8PIPURBzNRXayIWNfM"
+                    alt=""
+                  />
+                </div>
+
+                <div className="p-2">
+                  <p className="font-mono text-sm text-gray-400">
+                    &apos;{t.navigasi.item2}&apos;
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -5,17 +5,19 @@
     },
 
     "navigasi": {
-     "brand": "MEREK",
+     "brand": "MEREK KAMI",
      "lifestyle": "GAYA HIDUP",
      "title1": "DUNIA RV",
      "title2": "KATEGORI 'SEGERA'",
-     "brand1": "CATATAN SEJARAH RV",
-     "brand2": "ARSIP",
-     "brand3": "KEAUTENTIKAN BARANG",
-     "item1": "SEMUA ITEM LAINNYA",
-     "item2": "KAOS POLOS & KAOS",
-     "item3": "HOODIE & JAKET",
-     "item4": "CELANA PENDEK & PANJANG"
+     "brand1": "AKTIVITAS KAMI",
+     "brand2": "PERJALANAN SEJARAH",
+     "brand3": "ARSIP",
+     "brand4": "KEAUTENTIKAN BARANG",
+     "item1": "BARANG TERBARU",
+     "item2": "SEMUA BARANG LAINNYA",
+     "item3": "KAOS POLOS & KAOS",
+     "item4": "HOODIE & JAKET",
+     "item5": "CELANA PENDEK & PANJANG"
     },
 
     "notif": {
