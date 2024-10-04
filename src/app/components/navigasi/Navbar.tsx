@@ -225,7 +225,7 @@ const Navbar: React.FC<NavbarProps> = ({
   return (
     <header className="sticky top-0 left-0 right-0 z-10">
       <div
-        className={`relative flex items-start justify-between px-4 py-[14px] transition-colors duration-500 ${
+        className={`relative flex items-start justify-between px-4 py-[14px] md:py-[20px] xl:py-[24px] transition-colors duration-500 ${
           isScrolledPast ? colorsNavbar : ""
         }`}
       >
@@ -237,9 +237,9 @@ const Navbar: React.FC<NavbarProps> = ({
             closeItemsMenu();
             closeDropdownLang();
           }}
-          className="absolute top-[6px] md:top-[4px] xl:top-[1.2px] left-1/2 transform -translate-x-1/2"
+          className="absolute -top-[4px] md:top-[0.8px] xl:top-0 left-1/2 transform -translate-x-1/2"
         >
-          <div className="relative w-12 h-12 md:w-16 md:h-16">
+          <div className="relative w-14 h-14 md:w-16 md:h-16">
             <Image
               src={isScrolledPast ? pictureScroll : pictureDropdown}
               alt="Rv"
@@ -324,7 +324,7 @@ const Navbar: React.FC<NavbarProps> = ({
               <div className="flex items-start space-x-32">
                 <button
                   onClick={openBrandMenu}
-                  className={`font-mono font-bold ${
+                  className={`font-mono ${
                     isScrolledPast ? colorsTextScroll : colorsTextDropdown
                   }`}
                 >
@@ -333,7 +333,7 @@ const Navbar: React.FC<NavbarProps> = ({
 
                 <button
                   onClick={openItemsMenu}
-                  className={`font-mono font-bold ${
+                  className={`font-mono ${
                     isScrolledPast ? colorsTextScroll : colorsTextDropdown
                   }`}
                 >
@@ -350,7 +350,7 @@ const Navbar: React.FC<NavbarProps> = ({
               <div className="flex items-start space-x-32">
                 <button
                   onClick={openBrandMenu}
-                  className={`font-mono font-bold ${
+                  className={`font-mono ${
                     isScrolledPast ? colorsTextScroll : colorsText
                   }`}
                 >
@@ -359,7 +359,7 @@ const Navbar: React.FC<NavbarProps> = ({
 
                 <button
                   onClick={openItemsMenu}
-                  className={`font-mono font-bold ${
+                  className={`font-mono ${
                     isScrolledPast ? colorsTextScroll : colorsText
                   }`}
                 >
