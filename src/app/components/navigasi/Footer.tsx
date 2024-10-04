@@ -60,7 +60,11 @@ const Footer: React.FC<FooterProps> = ({ bgColor, textColor }) => {
               </div>
 
               <div className="py-[4px]">
-                <a href="/email" target="_blank" className="font-mono text-sm">
+                <a
+                  href="mailto:revorions@gmail.com"
+                  target="_blank"
+                  className="font-mono text-sm"
+                >
                   EMAIL US
                 </a>
               </div>
