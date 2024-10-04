@@ -13,7 +13,7 @@ export default async function RootLayout({
   return (
     <html lang={params.lang}>
       <head>
-        <link rel="icon" href="/rv.ico" sizes="32x32" />
+        <link rel="icon" href="/revorions.ico" sizes="32x32" />
       </head>
       <body>
         <DictionaryProvider dictionary={dictionary}>
