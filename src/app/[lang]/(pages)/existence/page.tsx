@@ -12,7 +12,7 @@ import PageLocation from "../../../components/navigasi/PageLocation";
 
 export const metadata = {
   title: "EXISTENCE",
-  description: "Every era has history and innovation.",
+  description: "Part of their identity and life.",
 };
 
 const page = () => {
