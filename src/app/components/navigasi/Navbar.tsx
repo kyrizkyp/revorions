@@ -68,18 +68,14 @@ const Navbar: React.FC<NavbarProps> = ({
   const menuBrand = [
     {
       title: t.navigasi.brand1,
-      page: "/activity",
+      page: "/existence",
     },
     {
       title: t.navigasi.brand2,
-      page: "/history",
-    },
-    {
-      title: t.navigasi.brand3,
       page: "/archives",
     },
     {
-      title: t.navigasi.brand4,
+      title: t.navigasi.brand3,
       page: "/authenticity",
     },
   ];

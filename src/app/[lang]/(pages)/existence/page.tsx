@@ -2,16 +2,16 @@ import React from "react";
 
 import TimeZone from "../../../components/navigasi/TimeZone";
 import Navbar from "../../../components/navigasi/Navbar";
-import HistoryHero from "../../../components/history/HistoryHero";
-import HistoryNote from "../../../components/history/HistoryNote";
-import HistoryGalleryNote from "../../../components/history/HistoryGalleryNote";
-import HistoryArt from "../../../components/history/HistoryArt";
-import HistoryGalleryArt from "../../../components/history/HistoryGalleryArt";
+import ExistenceHero from "../../../components/existence/ExistenceHero";
+import ExistenceNote from "../../../components/existence/ExistenceNote";
+import ExistenceGalleryNote from "../../../components/existence/ExistenceGalleryNote";
+import ExistenceArt from "../../../components/existence/ExistenceArt";
+import ExistenceGalleryArt from "../../../components/existence/ExistenceGalleryArt";
 import Footer from "../../../components/navigasi/Footer";
 import PageLocation from "../../../components/navigasi/PageLocation";
 
 export const metadata = {
-  title: "HISTORY",
+  title: "EXISTENCE",
   description: "Every era has history and innovation.",
 };
 
@@ -41,32 +41,32 @@ const page = () => {
 
       <section className="pb-10">
         <div>
-          <HistoryHero />
+          <ExistenceHero />
         </div>
       </section>
 
       <section className="flex-grow bg-white">
         <section className="py-10">
           <div>
-            <HistoryNote />
+            <ExistenceNote />
           </div>
         </section>
 
         <section className="py-10">
           <div>
-            <HistoryGalleryNote />
+            <ExistenceGalleryNote />
           </div>
         </section>
 
         <section className="py-10">
           <div>
-            <HistoryArt />
+            <ExistenceArt />
           </div>
         </section>
 
         <section className="py-10">
           <div>
-            <HistoryGalleryArt />
+            <ExistenceGalleryArt />
           </div>
         </section>
       </section>

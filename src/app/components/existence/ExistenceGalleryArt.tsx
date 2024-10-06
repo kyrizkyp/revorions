@@ -1,6 +1,6 @@
 import React from "react";
 
-const HistoryGalleryArt = () => {
+const ExistenceGalleryArt = () => {
   const images = [
     "https://fastly.picsum.photos/id/456/300/300.jpg?hmac=CgDpdsWrPu1M-lSVyBmb4tB8w-alAOPACgjC4er8Bug",
 
@@ -30,4 +30,4 @@ const HistoryGalleryArt = () => {
   );
 };
 
-export default HistoryGalleryArt;
+export default ExistenceGalleryArt;

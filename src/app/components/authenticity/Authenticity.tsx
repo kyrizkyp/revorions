@@ -25,7 +25,7 @@ const Authenticity = () => {
         </div>
 
         <div className="self-end lg:self-auto px-0 lg:px-2 pt-8 lg:pt-0">
-          <p className="font-mono text-xs md:text-sm">&lsquo;RV24&lsquo;-25</p>
+          <p className="font-mono text-xs md:text-sm">&lsquo;RV04&lsquo;-04</p>
         </div>
       </div>
     </div>
