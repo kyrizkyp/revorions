@@ -12,14 +12,8 @@ const Archives = () => {
           <h1 className="font-mono text-xs md:text-sm">{t.archives.page}</h1>
         </div>
 
-        <div className="flex flex-col items-center justify-center">
-          <div className="p-2 text-center">
-            <h1 className="font-mono font-bold">{t.archives.title1}</h1>
-          </div>
-
-          <div className="max-w-4xl text-center p-2">
-            <p className="font-mono text-xs md:text-sm">{t.archives.desc1}</p>
-          </div>
+        <div className="max-w-2xl text-center p-2">
+          <p className="font-mono text-xs md:text-sm">{t.archives.desc1}</p>
         </div>
 
         <div className="self-end lg:self-auto px-0 lg:px-2 pt-8 lg:pt-0">
