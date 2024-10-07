@@ -37,7 +37,6 @@
 
     "existence": {
      "page": "EKSISTENSI",
-     "title1": "REVORIONS",
      "desc1": "Mengarah pada kepribadian dan eksistensi setiap individu. Sebagai pengalaman yang dijalani, pakaian menjadi bagian dari identitas dan kehidupan mereka, mendefinisikan fungsi pakaian lebih dari sekedar estetika.",
 
      "title2": "REVORIONS INDEPENDEN",
@@ -50,14 +49,12 @@
 
     "archives": {
     "page": "ARSIP",
-    "title1": "ARSIP CERITA",
     "desc1": "Setiap koleksi adalah sebuah cerita, menampilkan evolusi dan inovasi dalam setiap desain. Inspirasi terpancar di balik setiap detail, menggambarkan perjalanan kreativitas dan ekspresi tanpa batas.",
     "btnLoad": "MUAT LEBIH BANYAK"
     },
 
     "authenticity": {
     "page": "KEASLIAN",
-    "title1": "TENTANG KEASLIAN",
     "desc1": "Kami memahami betapa pentingnya keaslian dan eksklusivitas setiap produk kami. Oleh karena itu, setiap item pakaian kami dilengkapi dengan nomor seri unik yang memastikan bahwa Anda mendapatkan produk asli dari RV. Nomor seri ini bukan sekedar tanda pengenal, tetapi juga jaminan bahwa Anda mendapatkan kualitas dan desain yang telah kami rancang dengan cermat.",
 
     "idDesc": "Untuk mengecek keaslian produk kami, silahkan cek seri ID pada label tag barang yang Anda miliki. Masukkan 12-digit kode RV, pada kolom di bawah tanpa menggunakan tanda hubung '-', klik 'KIRIM' tunggu beberapa saat lalu klik 'PERIKSA KEASLIAN'. Anda akan diarahkan ke halaman yang merinci keaslian barang yang Anda miliki.",

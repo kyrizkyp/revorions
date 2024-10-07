@@ -14,14 +14,10 @@ const Authenticity = () => {
           </h1>
         </div>
 
-        <div className="flex flex-col md:flex-row items-start gap-6 xl:gap-32">
-          <div className="text-left">
-            <h1 className="font-mono font-bold">{t.authenticity.title1}</h1>
-          </div>
-
-          <div className="max-w-xl xl:max-w-2xl">
-            <p className="font-mono text-sm">{t.authenticity.desc1}</p>
-          </div>
+        <div className="max-w-xl xl:max-w-2xl">
+          <p className="text-center font-mono text-sm">
+            {t.authenticity.desc1}
+          </p>
         </div>
 
         <div className="self-end lg:self-auto px-0 lg:px-2 pt-8 lg:pt-0">

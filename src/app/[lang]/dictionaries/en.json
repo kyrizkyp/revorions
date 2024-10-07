@@ -37,7 +37,6 @@
 
   "existence": {
     "page": "EXISTENCE",
-    "title1": "REVORIONS",
     "desc1": "Leads to the personality and existence of each individual. As a lived experience, clothing becomes part of their identity and life, defining the function of clothing more than just aesthetics.",
 
     "title2": "REVORIONS INDEPENDENT",
@@ -50,14 +49,12 @@
 
   "archives": {
     "page": "ARCHIVES",
-    "title1": "STORY ARCHIVES",
     "desc1": "Each collection is a story, showcasing evolution and innovation in every design. Inspiration shines behind every detail, depicting a journey of limitless creativity and expression.",
     "btnLoad": "LOAD MORE"
   },
 
   "authenticity": {
     "page": "AUTHENTICITY",
-    "title1": "ABOUT AUTHENTICITY",
     "desc1": "We understand how important the authenticity and exclusivity of each of our products is. Therefore, each of our clothing items comes with a unique serial number ensuring that you are getting a genuine product from RV. This serial number is not just identification, but also a guarantee that you are getting the quality and design that we have carefully designed.",
 
     "idDesc": "To check the authenticity of our products, please check the ID series on the item tag label that you own. Enter the 12-digit RV code, in the column below without using the hyphen '-', click 'SEND' wait a few moments then click 'CHECK AUTHENTICITY'. You will be directed to a page detailing the authenticity of the item you own.",
