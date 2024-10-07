@@ -11,7 +11,7 @@
     "title2": "CATEGORY 'SOON'",
     "brand1": "EXISTENCE",
     "brand2": "THE ARCHIVES",
-    "brand3": "AUTHENTICITY ITEM",
+    "brand3": "AUTHENTICITY",
     "item1": "NEWEST ITEMS",
     "item2": "ALL OTHER ITEMS",
     "item3": "PLAIN & T-SHIRTS",
@@ -58,7 +58,7 @@
     "desc1": "We understand how important the authenticity and exclusivity of each of our products is. Therefore, each of our clothing items comes with a unique serial number ensuring that you are getting a genuine product from RV. This serial number is not just identification, but also a guarantee that you are getting the quality and design that we have carefully designed.",
 
     "idDesc": "To check the authenticity of our products, please check the ID series on the item tag label that you own. Enter the 12-digit RV code, in the column below without using the hyphen '-', click 'SEND' wait a few moments then click 'CHECK AUTHENTICITY'. You will be directed to a page detailing the authenticity of the item you own.",
-    "labelId": "PLEASE ENTER ID",
+    "labelId": "ENTER ID",
     "submit": "SEND",
 
     "message": "Please enter a 12-digit number.",

@@ -317,7 +317,7 @@ const Navbar: React.FC<NavbarProps> = ({
                 openMenu || openBrand || openItems ? "opacity-100" : "opacity-0"
               }`}
             >
-              <div className="flex items-start space-x-32">
+              <div className="flex items-start gap-16">
                 <button
                   onClick={openBrandMenu}
                   className={`font-mono ${
@@ -343,7 +343,7 @@ const Navbar: React.FC<NavbarProps> = ({
                 openMenu || openBrand || openItems ? "opacity-0" : "opacity-100"
               }`}
             >
-              <div className="flex items-start space-x-32">
+              <div className="flex items-start gap-16">
                 <button
                   onClick={openBrandMenu}
                   className={`font-mono ${
